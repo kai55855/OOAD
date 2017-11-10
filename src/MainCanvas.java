@@ -4,27 +4,26 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class MainCanvas extends Canvas {
-    JLabel stateText;
-    int xStart, yStart, xEnd, yEnd, xPress = 0, yPress = 0;
-    private MouseClick mouse;
-    public MainCanvas(JLabel label){
+    private MouseClick mouseClick;
+    public MainCanvas(){
         super();
         MouseMotion tmp = new MouseMotion();
         this.addMouseListener(tmp);
         this.addMouseMotionListener(tmp);
-        stateText = label;
-
-        setMouse(new ClassBtn());
+        //default is selectBtnClick
+        setMouse(new SelectBtnClick());
 
     }
 
     void setMouse(MouseClick mouseClick){
-        this.mouse = mouseClick;
+        this.mouseClick = mouseClick;
     }
 
     void click(){
-        this.mouse.mouseClick();
+        this.mouseClick.mouseClick();
     }
+
+
 
 
     public void paint(Graphics g) {
@@ -41,6 +40,7 @@ public class MainCanvas extends Canvas {
 //            xPress = e.getX();
 //            yPress = e.getY();
 //            repaint();
+            mouseClick.mouseClick();
 
         }
         public void mouseReleased(MouseEvent e){

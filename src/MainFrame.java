@@ -2,6 +2,8 @@ import sun.applet.Main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
@@ -14,10 +16,14 @@ public class MainFrame extends JFrame{
     JMenuBar menubar = new JMenuBar();
 
     JPanel controlPanel = new JPanel(new GridLayout(6, 1));
-    MainCanvas mainCanvas = new MainCanvas(stateText);
 
-    JButton button = new JButton("JButton");
+    MouseClick mouseClick;
+    MainCanvas mainCanvas = new MainCanvas();
+
+    SelectBtn selectBtn = new SelectBtn();
     UseCaseBtn useCaseBtn = new UseCaseBtn();
+    ClassBtn classBtn = new ClassBtn();
+
 
 
 
@@ -44,14 +50,56 @@ public class MainFrame extends JFrame{
         menubar.add(demo2);
         this.setJMenuBar(menubar);
         //control plane
-        controlPanel.add(button);
+        controlPanel.add(selectBtn);
         controlPanel.add(useCaseBtn);
+        controlPanel.add(classBtn);
         controlPanel.setVisible(true);
-        controlPanel.setBackground(new Color(255, 255, 255));
+        controlPanel.setBackground(new Color(120, 166, 255));
         this.add(controlPanel, BorderLayout.WEST);
         this.add(mainCanvas, BorderLayout.CENTER);
         this.add(stateText, BorderLayout.SOUTH);
         this.setVisible(true);
+    }
+
+    class SelectBtn extends JButton{
+        public SelectBtn(){
+            super("Select");
+            this.addActionListener(new SelectBtn.SelectBtnAction());
+        }
+        class SelectBtnAction implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainCanvas.setMouse(new SelectBtnClick());
+            }
+        }
+    }
+
+    class UseCaseBtn extends JButton{
+        public UseCaseBtn(){
+            super("Use Case");
+            this.addActionListener(new UseCaseBtnAction());
+        }
+
+        class UseCaseBtnAction implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainCanvas.setMouse(new UseCaseBtnClick());
+            }
+        }
+    }
+
+    class ClassBtn extends JButton{
+        public ClassBtn(){
+            super("Class");
+            this.addActionListener(new ClassBtnAction());
+        }
+
+        class ClassBtnAction implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainCanvas.setMouse(new ClassBtnClick());
+            }
+        }
     }
 
 }
