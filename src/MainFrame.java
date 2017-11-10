@@ -28,6 +28,7 @@ public class MainFrame extends JFrame{
     public MainFrame(){
         //comit test
         //intelliji commit push test
+        //branch test
         super("UML editor");
         this.setBounds(0,0,800,800);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
