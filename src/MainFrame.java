@@ -23,6 +23,10 @@ public class MainFrame extends JFrame {
     SelectBtn selectBtn = new SelectBtn();
     UseCaseBtn useCaseBtn = new UseCaseBtn();
     ClassBtn classBtn = new ClassBtn();
+    AssociationLineBtn associationBtn = new AssociationLineBtn();
+    GeneralizationLineBtn generalizationBtn = new GeneralizationLineBtn();
+    CompositionLineBtn compositionBtn = new CompositionLineBtn();
+
 
 
     public static void main(String[] args) {
@@ -52,6 +56,9 @@ public class MainFrame extends JFrame {
         umlBtn.add(selectBtn);
         umlBtn.add(useCaseBtn);
         umlBtn.add(classBtn);
+        umlBtn.add(associationBtn);
+        umlBtn.add(generalizationBtn);
+        umlBtn.add(compositionBtn);
         for (int i = 0; i < umlBtn.size(); i++) {
             controlPanel.add((JButton) umlBtn.get(i));
         }
@@ -79,6 +86,54 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mainCanvas.changeMouseMode(1);
+                setBtnsToWhite();
+                setBackground(Color.gray);
+            }
+        }
+    }
+
+    class AssociationLineBtn extends JButton{
+        public AssociationLineBtn() {
+            super("Association Line");
+            this.addActionListener(new AssociationLineBtn.AssociationLineBtnAction());
+        }
+
+        class AssociationLineBtnAction implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainCanvas.changeMouseMode(2);
+                setBtnsToWhite();
+                setBackground(Color.gray);
+            }
+        }
+    }
+
+    class GeneralizationLineBtn extends JButton{
+        public GeneralizationLineBtn() {
+            super("Association Line");
+            this.addActionListener(new GeneralizationLineBtn.GeneralizationLineBtnAction());
+        }
+
+        class GeneralizationLineBtnAction implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainCanvas.changeMouseMode(3);
+                setBtnsToWhite();
+                setBackground(Color.gray);
+            }
+        }
+    }
+
+    class CompositionLineBtn extends JButton{
+        public CompositionLineBtn() {
+            super("Association Line");
+            this.addActionListener(new CompositionLineBtn.CompositionLIneBtnAction());
+        }
+
+        class CompositionLIneBtnAction implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainCanvas.changeMouseMode(4);
                 setBtnsToWhite();
                 setBackground(Color.gray);
             }

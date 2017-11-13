@@ -13,6 +13,17 @@ public class UseCaseObject extends  UmlObject{
 
     @Override
     Graphics2D draw(Graphics2D g2){
+        if(getSelected()){
+            Rectangle r1 = new Rectangle(this.getX() + 34, this.getY() - 5, 8, 8);
+            Rectangle r2 = new Rectangle(this.getX() + 34, this.getY() + 38, 8, 8);
+            Rectangle r3 = new Rectangle(this.getX() + 76, this.getY() + 16, 8, 8);
+            Rectangle r4 = new Rectangle(this.getX() - 4, this.getY() + 16, 8, 8);
+            g2.setPaint(Color.gray);
+            g2.fill(r1);
+            g2.fill(r2);
+            g2.fill(r3);
+            g2.fill(r4);
+        }
         g2.setPaint(Color.black);
         g2.fill(ellipse2D);
         g2.setColor(Color.white);
@@ -44,4 +55,5 @@ public class UseCaseObject extends  UmlObject{
         else
             return false;
     }
+
 }
