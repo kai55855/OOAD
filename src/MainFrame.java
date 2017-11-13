@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.util.Vector;
 
 public class MainFrame extends JFrame{
     static JLabel  stateText = new JLabel("游標位置 :");
@@ -17,20 +18,17 @@ public class MainFrame extends JFrame{
 
     JPanel controlPanel = new JPanel(new GridLayout(6, 1));
 
-    MouseClick mouseClick;
     MainCanvas mainCanvas = new MainCanvas();
 
     SelectBtn selectBtn = new SelectBtn();
     UseCaseBtn useCaseBtn = new UseCaseBtn();
     ClassBtn classBtn = new ClassBtn();
 
-
-
-
     public static void main(String[] args){
         MainFrame mainFrame = new MainFrame();
-    }
 
+
+    }
     public MainFrame(){
         //comit test
         //intelliji commit push test
@@ -39,7 +37,6 @@ public class MainFrame extends JFrame{
         this.setBounds(0,0,800,800);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.getContentPane().setLayout(new BorderLayout());
-
         //menu
         demo.add(item1);
         demo.addSeparator();
@@ -69,21 +66,7 @@ public class MainFrame extends JFrame{
         class SelectBtnAction implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainCanvas.setMouse(new SelectBtnClick());
-            }
-        }
-    }
-
-    class UseCaseBtn extends JButton{
-        public UseCaseBtn(){
-            super("Use Case");
-            this.addActionListener(new UseCaseBtnAction());
-        }
-
-        class UseCaseBtnAction implements ActionListener{
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainCanvas.setMouse(new UseCaseBtnClick());
+                mainCanvas.changeMouseMode(1);
             }
         }
     }
@@ -97,10 +80,26 @@ public class MainFrame extends JFrame{
         class ClassBtnAction implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainCanvas.setMouse(new ClassBtnClick());
+                mainCanvas.changeMouseMode(5);
             }
         }
     }
+
+    class UseCaseBtn extends JButton{
+        public UseCaseBtn(){
+            super("Use Case");
+            this.addActionListener(new UseCaseBtnAction());
+        }
+
+        class UseCaseBtnAction implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainCanvas.changeMouseMode(6);
+            }
+        }
+    }
+
+
 
 }
 
