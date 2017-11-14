@@ -78,4 +78,5 @@ public abstract class UmlObject {
     abstract boolean clicked(int x, int y, Graphics2D g2);
     abstract void move(int x, int y);
     abstract boolean hit(UmlObject umlObject, Graphics2D g2);
+    abstract Point[] linePoint(int x, int y, Graphics2D g2);
 }

@@ -28,11 +28,8 @@ public class MainFrame extends JFrame {
     CompositionLineBtn compositionBtn = new CompositionLineBtn();
 
 
-
     public static void main(String[] args) {
         MainFrame mainFrame = new MainFrame();
-
-
     }
 
     public MainFrame() {
@@ -72,7 +69,7 @@ public class MainFrame extends JFrame {
 
     void setBtnsToWhite() {
         for (int i = 0; i < umlBtn.size(); i++) {
-            ((JButton)umlBtn.get(i)).setBackground(Color.white);
+            ((JButton) umlBtn.get(i)).setBackground(Color.white);
         }
     }
 
@@ -92,7 +89,7 @@ public class MainFrame extends JFrame {
         }
     }
 
-    class AssociationLineBtn extends JButton{
+    class AssociationLineBtn extends JButton {
         public AssociationLineBtn() {
             super("Association Line");
             this.addActionListener(new AssociationLineBtn.AssociationLineBtnAction());
@@ -108,9 +105,9 @@ public class MainFrame extends JFrame {
         }
     }
 
-    class GeneralizationLineBtn extends JButton{
+    class GeneralizationLineBtn extends JButton {
         public GeneralizationLineBtn() {
-            super("Association Line");
+            super("Generalization Line");
             this.addActionListener(new GeneralizationLineBtn.GeneralizationLineBtnAction());
         }
 
@@ -124,9 +121,9 @@ public class MainFrame extends JFrame {
         }
     }
 
-    class CompositionLineBtn extends JButton{
+    class CompositionLineBtn extends JButton {
         public CompositionLineBtn() {
-            super("Association Line");
+            super("Composition Line");
             this.addActionListener(new CompositionLineBtn.CompositionLIneBtnAction());
         }
 

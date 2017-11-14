@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edbc6c5c-cd2e-43b4-8f18-b4078bfaafef" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/OOAD/MainFrame.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOAD/MainCanvas$MouseMotion.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainCanvas$MouseMotion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOAD/MainCanvas.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainCanvas.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOAD/MainFrame.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainFrame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClassObject.java" afterPath="$PROJECT_DIR$/src/ClassObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainCanvas.java" afterPath="$PROJECT_DIR$/src/MainCanvas.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainFrame.java" afterPath="$PROJECT_DIR$/src/MainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MouseMode.java" afterPath="$PROJECT_DIR$/src/MouseMode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UmlObject.java" afterPath="$PROJECT_DIR$/src/UmlObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UseCaseObject.java" afterPath="$PROJECT_DIR$/src/UseCaseObject.java" />
     </list>
@@ -27,7 +28,7 @@
       <file leaf-file-name="UMLeditor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UMLeditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
+            <state relative-caret-position="0">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
@@ -37,10 +38,12 @@
       <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="503">
+              <caret line="130" column="21" lean-forward="true" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1034#1035#0" expanded="true" />
+                <element signature="e#1087#1088#0" expanded="true" />
                 <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
                 <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
               </folding>
@@ -51,16 +54,14 @@
       <file leaf-file-name="MainCanvas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="556">
+              <caret line="363" column="17" lean-forward="true" selection-start-line="363" selection-start-column="17" selection-end-line="363" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#MainCanvas#0;class#MainCanvas#0" expanded="false" />
+                <element signature="class#SelectBtnMode#0;class#MainCanvas#0" expanded="false" />
                 <element signature="class#ClassBtnMode#0;class#MainCanvas#0" expanded="false" />
                 <element signature="class#UseCaseBtnMode#0;class#MainCanvas#0" expanded="false" />
                 <element signature="class#AssociationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#GeneralizationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#CompositionLineBtnMode#0;class#MainCanvas#0" expanded="false" />
                 <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
                 <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
                 <element signature="class#MouseMotion#0;class#MainCanvas#0" expanded="false" />
@@ -72,10 +73,13 @@
       <file leaf-file-name="ClassObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="332">
+              <caret line="110" column="40" lean-forward="false" selection-start-line="110" selection-start-column="40" selection-end-line="110" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#draw#0;class#ClassObject#0" expanded="false" />
+                <element signature="method#clicked#0;class#ClassObject#0" expanded="false" />
+                <element signature="method#move#0;class#ClassObject#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -84,8 +88,8 @@
       <file leaf-file-name="UseCaseObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UseCaseObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1287">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="359">
+              <caret line="98" column="41" lean-forward="false" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,8 +100,8 @@
       <file leaf-file-name="UmlObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UmlObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-477">
-              <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="475">
+              <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#670#671#0" expanded="true" />
@@ -174,6 +178,10 @@
       <find>enableDrag</find>
       <find>ellipse2D</find>
       <find>drawPaintedObject</find>
+      <find>selectBtnMode</find>
+      <find>prevUMLObject</find>
+      <find>point</find>
+      <find>findTopObject</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,9 +217,10 @@
         <option value="$PROJECT_DIR$/src/SortUmlObject.java" />
         <option value="$PROJECT_DIR$/src/UmlButton.java" />
         <option value="$PROJECT_DIR$/src/MouseMode.java" />
-        <option value="$PROJECT_DIR$/src/MainFrame.java" />
-        <option value="$PROJECT_DIR$/src/UseCaseObject.java" />
         <option value="$PROJECT_DIR$/src/UmlObject.java" />
+        <option value="$PROJECT_DIR$/src/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/AssociationLineArrow.java" />
+        <option value="$PROJECT_DIR$/src/UseCaseObject.java" />
         <option value="$PROJECT_DIR$/src/MainCanvas.java" />
         <option value="$PROJECT_DIR$/src/ClassObject.java" />
       </list>
@@ -490,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510563117176</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="finish UmlObject being selected">
+      <created>1510593278688</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1510593278688</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -531,14 +547,15 @@
     <MESSAGE value="before implement UmlObject" />
     <MESSAGE value="finish UmlObject, depth problem, cover problem" />
     <MESSAGE value="finish change btn color when it is being clicked" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish change btn color when it is being clicked" />
+    <MESSAGE value="finish UmlObject being selected" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish UmlObject being selected" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainFrame.java</url>
-          <line>158</line>
+          <line>155</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -548,13 +565,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/MouseMotionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1484">
-          <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/MouseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1568">
@@ -568,6 +578,8 @@
           <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
             <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
             <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
           </folding>
@@ -588,6 +600,8 @@
           <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
             <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
             <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
           </folding>
@@ -608,12 +622,10 @@
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#MainCanvas#0;class#MainCanvas#0" expanded="false" />
+            <element signature="class#SelectBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#ClassBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#UseCaseBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#AssociationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#GeneralizationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#CompositionLineBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#MouseMotion#0;class#MainCanvas#0" expanded="false" />
@@ -635,6 +647,8 @@
           <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
             <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
             <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
           </folding>
@@ -648,12 +662,10 @@
           <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#MainCanvas#0;class#MainCanvas#0" expanded="false" />
+            <element signature="class#SelectBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#ClassBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#UseCaseBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#AssociationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#GeneralizationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#CompositionLineBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#MouseMotion#0;class#MainCanvas#0" expanded="false" />
@@ -667,6 +679,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
             <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
             <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
           </folding>
@@ -835,7 +849,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UMLeditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
+        <state relative-caret-position="0">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
@@ -883,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UmlObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-477">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="23" />
+        <state relative-caret-position="475">
+          <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#670#671#0" expanded="true" />
@@ -895,18 +909,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
+    <entry file="file://$PROJECT_DIR$/src/AssociationLineArrow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="28">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UseCaseObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="98" column="41" lean-forward="false" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#MainCanvas#0;class#MainCanvas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="110" column="40" lean-forward="false" selection-start-line="110" selection-start-column="40" selection-end-line="110" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#draw#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#clicked#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#move#0;class#ClassObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="363" column="17" lean-forward="true" selection-start-line="363" selection-start-column="17" selection-end-line="363" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#SelectBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#ClassBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#UseCaseBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#AssociationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#GeneralizationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#CompositionLineBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
             <element signature="class#MouseMotion#0;class#MainCanvas#0" expanded="false" />
@@ -914,32 +957,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UseCaseObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1287">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="503">
+          <caret line="130" column="21" lean-forward="true" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
             <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
             <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
           </folding>
