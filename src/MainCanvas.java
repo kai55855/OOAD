@@ -17,7 +17,10 @@ public class MainCanvas extends Canvas {
     private GeneralizationLineBtnMode generalizationLineBtnMode;
     private CompositionLineBtnMode compositionLineBtnMode;
     private Vector paintedObject;
+    private Vector paintedLine;
     UmlObject prevUMLObject;
+    AssociationLine associationLine;
+
     int lineStartX, lineStartY;
 
 
@@ -35,6 +38,7 @@ public class MainCanvas extends Canvas {
         generalizationLineBtnMode = new GeneralizationLineBtnMode();
         compositionLineBtnMode = new CompositionLineBtnMode();
         paintedObject = new Vector();
+        paintedLine = new Vector();
         lineStartX = 0;
         lineStartY = 0;
     }
@@ -102,19 +106,18 @@ public class MainCanvas extends Canvas {
             pressed = 0;
             dragged = 0;
             prevUMLObject = findTopObject(x, y);
-            paintedObject.remove(prevUMLObject);
+//            paintedObject.remove(prevUMLObject);
             if (prevUMLObject != null)
                 pressed = 1;
-            return;
         }
 
         @Override
         public void mouseDragged(int x, int y) {
             if (pressed > 0) {
-                paintedObject.remove(prevUMLObject);
+//                paintedObject.remove(prevUMLObject);
                 clear();
                 prevUMLObject.move(x, y);
-                paintedObject.add(prevUMLObject);
+                //paintedObject.add(prevUMLObject);
                 drawPaintedObject();
                 dragged = 1;
             }
@@ -124,18 +127,18 @@ public class MainCanvas extends Canvas {
         public void mouseReleased(int x, int y) {
             System.out.println("this is select btn released");
             if (dragged > 0) {
-                paintedObject.remove(prevUMLObject);
+//                paintedObject.remove(prevUMLObject);
                 clear();
                 prevUMLObject.move(x, y);
-                for (int i = 0; i < paintedObject.size(); i++) {
-                    if (prevUMLObject.hit((UmlObject) paintedObject.get(i), g2)) {
-                        ((UmlObject) paintedObject.get(i)).setDepth(((UmlObject) paintedObject.get(i)).getDepth() + 1);
-                    }
-                }
-                paintedObject.add(prevUMLObject);
+//                for (int i = 0; i < paintedObject.size(); i++) {
+//                    if (prevUMLObject.hit((UmlObject) paintedObject.get(i), g2)) {
+//                        ((UmlObject) paintedObject.get(i)).setDepth(((UmlObject) paintedObject.get(i)).getDepth() + 1);
+//                    }
+//                }
+//                paintedObject.add(prevUMLObject);
                 drawPaintedObject();
             } else if (dragged == 0 && pressed > 0) {
-                paintedObject.add(prevUMLObject);
+//                paintedObject.add(prevUMLObject);
             }
         }
     }
@@ -215,19 +218,20 @@ public class MainCanvas extends Canvas {
 
         @Override
         public void mousePressed(int x, int y) {
+            System.out.printf("line pressed\n");
             UmlObject top = findTopObject(x, y);
-            if(top != null){
+            if (top == null)
+                System.out.printf("top == null\n");
+            if (top != null) {
                 top.setSelected(true);
-                Point[] point;
-                point = top.linePoint(x, y, g2);
-                if (point != null) {
-                    g2 = top.draw(g2);
-                    repaint();
-                    lineStartX = point[0].x;
-                    lineStartY = point[0].y;
-                }
+                g2 = top.draw(g2);
+                repaint();
+                System.out.printf("top painted\n");
+                associationLine = new AssociationLine();
+                associationLine.setStartObject(top);
+                associationLine.setStartX(x);
+                associationLine.setStartY(y);
             }
-
         }
 
         @Override
@@ -239,16 +243,17 @@ public class MainCanvas extends Canvas {
         public void mouseReleased(int x, int y) {
             System.out.printf("line release\n");
             UmlObject top = findTopObject(x, y);
-            if(top != null){
+            if (top != null) {
                 top.setSelected(true);
-                Point[] point;
-                point = top.linePoint(x, y, g2);
-                if (point != null) {
-                    g2 = top.draw(g2);
-                    g2.setColor(Color.black);
-                    g2.drawLine(lineStartX, lineStartY, point[0].x, point[0].y);
-                    repaint();
-                }
+                g2 = top.draw(g2);
+                repaint();
+                g2.setColor(Color.black);
+                associationLine.setEndObject(top);
+                associationLine.setEndX(x);
+                associationLine.setEndY(y);
+                g2 = associationLine.draw(g2);
+                repaint();
+                paintedLine.add(associationLine);
             }
         }
 
@@ -263,7 +268,7 @@ public class MainCanvas extends Canvas {
         @Override
         public void mousePressed(int x, int y) {
             UmlObject top = findTopObject(x, y);
-            if(top != null){
+            if (top != null) {
                 top.setSelected(true);
                 Point[] point;
                 point = top.linePoint(x, y, g2);
@@ -284,7 +289,7 @@ public class MainCanvas extends Canvas {
         @Override
         public void mouseReleased(int x, int y) {
             UmlObject top = findTopObject(x, y);
-            if(top != null){
+            if (top != null) {
                 top.setSelected(true);
                 Point[] point;
                 point = top.linePoint(x, y, g2);
@@ -293,13 +298,12 @@ public class MainCanvas extends Canvas {
                     g2.setColor(Color.black);
                     g2.drawLine(lineStartX, lineStartY, point[1].x, point[1].y);
                     //need to rewrite
-                    if(point[0].x == point[1].x && point[0].y != point[1].y){
+                    if (point[0].x == point[1].x && point[0].y != point[1].y) {
                         System.out.printf("first case\n");
                         g2.drawLine(point[1].x + 4, point[1].y, point[1].x - 4, point[1].y);
                         g2.drawLine(point[1].x - 4, point[1].y, point[0].x, point[0].y);
                         g2.drawLine(point[1].x + 4, point[1].y, point[0].x, point[0].y);
-                    }
-                    else if(point[0].x != point[1].x && point[0].y == point[1].y){
+                    } else if (point[0].x != point[1].x && point[0].y == point[1].y) {
                         g2.drawLine(point[1].x, point[1].y - 4, point[1].x, point[1].y + 4);
                         g2.drawLine(point[1].x, point[1].y - 4, point[0].x, point[0].y);
                         g2.drawLine(point[1].x, point[1].y + 4, point[0].x, point[0].y);
@@ -319,7 +323,7 @@ public class MainCanvas extends Canvas {
         @Override
         public void mousePressed(int x, int y) {
             UmlObject top = findTopObject(x, y);
-            if(top != null){
+            if (top != null) {
                 top.setSelected(true);
                 Point[] point;
                 point = top.linePoint(x, y, g2);
@@ -340,7 +344,7 @@ public class MainCanvas extends Canvas {
         @Override
         public void mouseReleased(int x, int y) {
             UmlObject top = findTopObject(x, y);
-            if(top != null){
+            if (top != null) {
                 top.setSelected(true);
                 Point[] point;
                 point = top.linePoint(x, y, g2);
@@ -349,16 +353,17 @@ public class MainCanvas extends Canvas {
                     g2.setColor(Color.black);
                     g2.drawLine(lineStartX, lineStartY, point[1].x, point[1].y);
                     //need to rewrite
-                    if(point[0].x == point[1].x && point[0].y != point[1].y){
+                    if (point[0].x == point[1].x && point[0].y != point[1].y) {
                         System.out.printf("first case\n");
-                        g2.drawLine(point[1].x + 4, point[1].y, point[1].x - 4, point[1].y);
-                        g2.drawLine(point[1].x - 4, point[1].y, point[0].x, point[0].y);
-                        g2.drawLine(point[1].x + 4, point[1].y, point[0].x, point[0].y);
-                    }
-                    else if(point[0].x != point[1].x && point[0].y == point[1].y){
-                        g2.drawLine(point[1].x, point[1].y - 4, point[1].x, point[1].y + 4);
-                        g2.drawLine(point[1].x, point[1].y - 4, point[0].x, point[0].y);
-                        g2.drawLine(point[1].x, point[1].y + 4, point[0].x, point[0].y);
+                        g2.drawLine(point[1].x, point[1].y, point[1].x - 4, (point[0].y + point[1].y) / 2);
+                        g2.drawLine(point[1].x, point[1].y, point[1].x + 4, (point[0].y + point[1].y) / 2);
+                        g2.drawLine(point[0].x, point[0].y, point[1].x - 4, (point[0].y + point[1].y) / 2);
+                        g2.drawLine(point[0].x, point[0].y, point[1].x + 4, (point[0].y + point[1].y) / 2);
+                    } else if (point[0].x != point[1].x && point[0].y == point[1].y) {
+                        g2.drawLine(point[1].x, point[1].y, (point[0].x + point[1].x) / 2, point[1].y + 4);
+                        g2.drawLine(point[1].x, point[1].y, (point[0].x + point[1].x) / 2, point[1].y - 4);
+                        g2.drawLine(point[0].x, point[0].y, (point[0].x + point[1].x) / 2, point[1].y + 4);
+                        g2.drawLine(point[0].x, point[0].y, (point[0].x + point[1].x) / 2, point[1].y - 4);
                     }
                     repaint();
                 }
@@ -395,6 +400,11 @@ public class MainCanvas extends Canvas {
         g2.setPaint(Color.black);
         for (int i = 0; i < paintedObject.size(); i++) {
             g2 = ((UmlObject) paintedObject.get(i)).draw(g2);
+        }
+        repaint();
+//        System.out.printf("paintedLine size = %d\n", paintedLine.size());
+        for (int i = 0; i < paintedLine.size(); i++) {
+            g2 = ((UmlLine) paintedLine.get(i)).draw(g2);
         }
         repaint();
     }

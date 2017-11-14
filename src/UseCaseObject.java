@@ -8,12 +8,12 @@ public class UseCaseObject extends  UmlObject{
         setWidth(80);
         setHeight(40);
         ellipse2D = new Ellipse2D.Double(x, y, 80, 40);
-
     }
 
     @Override
     Graphics2D draw(Graphics2D g2){
         if(getSelected()){
+            System.out.printf("usecase selected\n");
             Rectangle r1 = new Rectangle(this.getX() + 34, this.getY() - 5, 8, 8);
             Rectangle r2 = new Rectangle(this.getX() - 4, this.getY() + 16, 8, 8);
             Rectangle r3 = new Rectangle(this.getX() + 34, this.getY() + 38, 8, 8);
@@ -25,6 +25,7 @@ public class UseCaseObject extends  UmlObject{
             g2.fill(r4);
         }
         g2.setPaint(Color.black);
+        ellipse2D = new Ellipse2D.Double(getX(), getY(), 80, 40);
         g2.fill(ellipse2D);
         g2.setColor(Color.white);
         g2.drawString(objectName, this.getX() + 15, this.getY() + 25);
@@ -44,7 +45,7 @@ public class UseCaseObject extends  UmlObject{
     void move(int x, int y) {
         setX(x);
         setY(y);
-        ellipse2D = new Ellipse2D.Double(x, y, 80, 40);
+//        ellipse2D = new Ellipse2D.Double(x, y, 80, 40);
     }
 
     @Override
