@@ -26,9 +26,6 @@ public class ClassObject extends UmlObject{
             g2.fill(r4);
         }
         g2.setPaint(Color.black);
-        name = new Rectangle(getX(), getY(), 40, 20);
-        attribute = new Rectangle(getX(), getY() + 20, 40, 20);
-        method = new Rectangle(getX(), getY() + 40, 40, 20);
         g2.fill(name);
         g2.draw(attribute);
         g2.draw(method);
@@ -50,9 +47,9 @@ public class ClassObject extends UmlObject{
     void move(int x, int y){
         setX(x);
         setY(y);
-//        name = new Rectangle(x, y, 40, 20);
-//        attribute = new Rectangle(x, y + 20, 40, 20);
-//        method = new Rectangle(x, y + 40, 40, 20);
+        name = new Rectangle(x, y, 40, 20);
+        attribute = new Rectangle(x, y + 20, 40, 20);
+        method = new Rectangle(x, y + 40, 40, 20);
     }
 
     @Override

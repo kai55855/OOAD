@@ -1,8 +1,7 @@
 import java.awt.*;
 
-
-public class AssociationLine extends UmlLine {
-    public AssociationLine() {
+public class CompositionLine extends UmlLine {
+    public CompositionLine() {
         super();
     }
 
@@ -28,7 +27,20 @@ public class AssociationLine extends UmlLine {
         point2 = this.endObject.linePoint(getEndX() + end_offset_x, getEndY() + end_offset_y, g2);
         if (point != null && point2 != null) {
             g2.setColor(Color.black);
-            g2.drawLine(point[0].x, point[0].y, point2[0].x, point2[0].y);
+            g2.drawLine(point[0].x, point[0].y, point2[1].x, point2[1].y);
+            //need to rewrite
+            if (point2[0].x == point2[1].x && point2[0].y != point2[1].y) {
+                System.out.printf("first case\n");
+                g2.drawLine(point2[1].x, point2[1].y, point2[1].x - 4, (point2[0].y + point2[1].y) / 2);
+                g2.drawLine(point2[1].x, point2[1].y, point2[1].x + 4, (point2[0].y + point2[1].y) / 2);
+                g2.drawLine(point2[0].x, point2[0].y, point2[1].x - 4, (point2[0].y + point2[1].y) / 2);
+                g2.drawLine(point2[0].x, point2[0].y, point2[1].x + 4, (point2[0].y + point2[1].y) / 2);
+            } else if (point2[0].x != point2[1].x && point2[0].y == point2[1].y) {
+                g2.drawLine(point2[1].x, point2[1].y, (point2[0].x + point2[1].x) / 2, point2[1].y + 4);
+                g2.drawLine(point2[1].x, point2[1].y, (point2[0].x + point2[1].x) / 2, point2[1].y - 4);
+                g2.drawLine(point2[0].x, point2[0].y, (point2[0].x + point2[1].x) / 2, point2[1].y + 4);
+                g2.drawLine(point2[0].x, point2[0].y, (point2[0].x + point2[1].x) / 2, point2[1].y - 4);
+            }
             this.startObject.setLined(true);
             this.endObject.setLined(true);
         } else {
@@ -40,6 +52,4 @@ public class AssociationLine extends UmlLine {
         }
         return g2;
     }
-
-
 }

@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public abstract class UmlObject {
     protected int depth, x, y, width, height;
-    protected  boolean selected;
+    protected  boolean selected, lined;
     protected String objectName;
     protected Ellipse2D ellipse2D;
     protected Rectangle name;
@@ -12,6 +12,7 @@ public abstract class UmlObject {
     protected Rectangle method;
     protected Rectangle r1, r2, r3, r4;
     public UmlObject(int x, int y, int depth, String objectName){
+        setLined(false);
         setSelected(false);
         setHeight(0);
         setWidth(0);
@@ -20,6 +21,15 @@ public abstract class UmlObject {
         setDepth(depth);
         setObjectName(objectName);
     }
+
+    void setLined(boolean lined){
+        this.lined = lined;
+    }
+
+    boolean getLined(){
+        return this.lined;
+    }
+
     void setSelected(boolean selected){
         this.selected = selected;
     }
