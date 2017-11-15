@@ -21,7 +21,7 @@ public class AssociationLine extends UmlLine {
         if (this.endObject.getY() != getEndObjY()) {
             end_offset_y = this.endObject.getY() - getEndObjY();
         }
-        System.out.printf("start_offset_x = %d, start_offset_y = %d, end_offset_x = %d, end_offset_y = %d\n", start_offset_x, start_offset_y, end_offset_x, end_offset_y);
+//        System.out.printf("start_offset_x = %d, start_offset_y = %d, end_offset_x = %d, end_offset_y = %d\n", start_offset_x, start_offset_y, end_offset_x, end_offset_y);
         Point[] point;
         point = this.startObject.linePoint(getStartX() + start_offset_x, getStartY() + start_offset_y, g2);
         Point[] point2;

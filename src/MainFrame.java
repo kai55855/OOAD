@@ -10,10 +10,11 @@ import java.util.Vector;
 
 public class MainFrame extends JFrame {
     static JLabel stateText = new JLabel("游標位置 :");
-    JMenu demo = new JMenu("demo");
-    JMenu demo2 = new JMenu("demo2");
-    JMenuItem item1 = new JMenuItem("one");
-    JMenuItem item2 = new JMenuItem("two");
+    JMenu file = new JMenu("File");
+    JMenu edit = new JMenu("Edit");
+    JMenuItem editItem = new JMenuItem("Change object name");
+    JMenuItem editItem2 = new JMenuItem("Group");
+    JMenuItem editItem3 = new JMenuItem("UnGroup");
     JMenuBar menubar = new JMenuBar();
 
     JPanel controlPanel = new JPanel(new GridLayout(6, 1));
@@ -41,13 +42,33 @@ public class MainFrame extends JFrame {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.getContentPane().setLayout(new BorderLayout());
         //menu
-        demo.add(item1);
-        demo.addSeparator();
-        demo2.add(item2);
-        demo.setPopupMenuVisible(true);
-        demo2.setPopupMenuVisible(true);
-        menubar.add(demo);
-        menubar.add(demo2);
+        edit.add(editItem);
+        editItem.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        String name = JOptionPane.showInputDialog(null, "請輸入:", "輸入對話框", JOptionPane.QUESTION_MESSAGE);
+                        mainCanvas.changeObjectName(name);
+                    }
+                }
+        );
+        edit.addSeparator();
+        edit.add(editItem2);
+        editItem2.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        mainCanvas.groupObject();
+                    }
+                }
+        );
+        edit.addSeparator();
+        edit.add(editItem3);
+
+        file.setPopupMenuVisible(true);
+        edit.setPopupMenuVisible(true);
+        menubar.add(file);
+        menubar.add(edit);
         this.setJMenuBar(menubar);
         //control plane
         umlBtn.add(selectBtn);

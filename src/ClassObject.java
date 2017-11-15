@@ -84,7 +84,7 @@ public class ClassObject extends UmlObject{
             point[0].y = this.getY() - 5;
             point[1].x = point[0].x;
             point[1].y = point[0].y - 10;
-            System.out.printf("in x = %d, y = %d\n", point[1].x, point[1].y);
+//            System.out.printf("in x = %d, y = %d\n", point[1].x, point[1].y);
             return point;
         }
         else if(g2.hit(rectangle, p2, false)){
@@ -92,7 +92,7 @@ public class ClassObject extends UmlObject{
             point[0].y = this.getY() + 27;
             point[1].x = point[0].x - 10;
             point[1].y = point[0].y ;
-            System.out.printf("in x = %d, y = %d\n", point[1].x, point[1].y);
+//            System.out.printf("in x = %d, y = %d\n", point[1].x, point[1].y);
 
             return point;
         }
@@ -101,7 +101,7 @@ public class ClassObject extends UmlObject{
             point[0].y = this.getY() + 63;
             point[1].x = point[0].x;
             point[1].y = point[0].y + 10;
-            System.out.printf("in x = %d, y = %d\n", point[1].x, point[1].y);
+//            System.out.printf("in x = %d, y = %d\n", point[1].x, point[1].y);
 
             return point;
         }
@@ -110,7 +110,7 @@ public class ClassObject extends UmlObject{
             point[0].y = this.getY() + 27;
             point[1].x = point[0].x + 10;
             point[1].y = point[0].y ;
-            System.out.printf("in x = %d, y = %d\n", point[1].x, point[1].y);
+//            System.out.printf("in x = %d, y = %d\n", point[1].x, point[1].y);
 
             return point;
         }

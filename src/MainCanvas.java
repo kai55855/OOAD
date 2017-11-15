@@ -6,6 +6,8 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Point2D;
 import java.util.Vector;
 
+import static java.lang.Math.abs;
+
 public class MainCanvas extends Canvas {
     private MouseMode mouseMode;
     private Image image;
@@ -22,8 +24,9 @@ public class MainCanvas extends Canvas {
     AssociationLine associationLine;
     GeneralizationLine generalizationLine;
     CompositionLine compositionLine;
+    GroupObject groupObject;
 
-    int lineStartX, lineStartY;
+    int pressedX, pressedY;
 
 
     public MainCanvas() {
@@ -40,8 +43,9 @@ public class MainCanvas extends Canvas {
         compositionLineBtnMode = new CompositionLineBtnMode();
         paintedObject = new Vector();
         paintedLine = new Vector();
-        lineStartX = 0;
-        lineStartY = 0;
+        groupObject = new GroupObject();
+        pressedX = 0;
+        pressedY = 0;
         changeMouseMode(1);
     }
 
@@ -93,16 +97,18 @@ public class MainCanvas extends Canvas {
 //            System.out.println("this is select btn clicked");
             paintedObject.sort(new SortUmlObject());
             for (int i = paintedObject.size() - 1; i >= 0; i--) {
-                System.out.printf("%d, ", ((UmlObject)paintedObject.get(i)).getDepth());
+                System.out.printf("%d, ", ((UmlObject) paintedObject.get(i)).getDepth());
             }
             System.out.printf("\n");
             for (int i = paintedObject.size() - 1; i >= 0; i--) {
-                if (((UmlObject) paintedObject.get(i)).getLined() || ((UmlObject) paintedObject.get(i)).clicked(x, y, g2)) {
+//                if (((UmlObject) paintedObject.get(i)).getLined() || ((UmlObject) paintedObject.get(i)).clicked(x, y, g2)) {
+                if (((UmlObject) paintedObject.get(i)).clicked(x, y, g2))
                     ((UmlObject) paintedObject.get(i)).setSelected(true);
-                } else {
+                else {
                     ((UmlObject) paintedObject.get(i)).setSelected(false);
                 }
             }
+
             drawPaintedObject();
         }
 
@@ -115,6 +121,10 @@ public class MainCanvas extends Canvas {
 //            paintedObject.remove(prevUMLObject);
             if (prevUMLObject != null)
                 pressed = 1;
+            else {
+                pressedX = x;
+                pressedY = y;
+            }
         }
 
         @Override
@@ -131,8 +141,8 @@ public class MainCanvas extends Canvas {
 
         @Override
         public void mouseReleased(int x, int y) {
-            System.out.println("this is select btn released");
-            if (dragged > 0) {
+//            System.out.println("this is select btn released");
+            if (dragged > 0 && pressed > 0) {
 //                paintedObject.remove(prevUMLObject);
                 clear();
                 prevUMLObject.move(x, y);
@@ -143,8 +153,32 @@ public class MainCanvas extends Canvas {
                 }
 //                paintedObject.add(prevUMLObject);
                 drawPaintedObject();
-            } else if (dragged == 0 && pressed > 0) {
-//                paintedObject.add(prevUMLObject);
+            } else {
+                int releasedX = x, releasedY = y;
+                for (int i = 0; i < paintedObject.size(); i++) {
+//                    if(!((UmlObject)paintedObject.get(i)).getLined()){
+                    ((UmlObject) paintedObject.get(i)).setSelected(false);
+//                    }
+                }
+                drawPaintedObject();
+                for (int i = 0; i < paintedObject.size(); i++) {
+                    int objX, objY, objW, objH;
+                    objX = ((UmlObject) paintedObject.get(i)).getX();
+                    objY = ((UmlObject) paintedObject.get(i)).getY();
+                    objW = ((UmlObject) paintedObject.get(i)).getWidth();
+                    objH = ((UmlObject) paintedObject.get(i)).getHeight();
+                    if ((objX >= pressedX && objX <= releasedX) || (objX <= pressedX && objX >= releasedX)) {
+                        if ((objY >= pressedY && objY <= releasedY) || (objY <= pressedY && objY >= releasedY)) {
+                            if ((objX + objW >= pressedX && objX + objW <= releasedX) || (objX + objW <= pressedX && objX + objW >= releasedX)) {
+                                if ((objY + objH >= pressedY && objY + objH <= releasedY) || (objY + objH <= pressedY && objY + objH >= releasedY)) {
+                                    ((UmlObject) paintedObject.get(i)).setSelected(true);
+                                    System.out.printf("pressedX = %d, pressedY = %d\n", pressedX, pressedY);
+                                }
+                            }
+                        }
+                    }
+                }
+                drawPaintedObject();
             }
         }
     }
@@ -217,6 +251,8 @@ public class MainCanvas extends Canvas {
     }
 
     public class AssociationLineBtnMode implements MouseMode {
+        boolean pressed = false;
+
         @Override
         public void mouseClicked(int x, int y) {
 
@@ -224,15 +260,17 @@ public class MainCanvas extends Canvas {
 
         @Override
         public void mousePressed(int x, int y) {
-            System.out.printf("line pressed\n");
+            pressed = false;
+//            System.out.printf("line pressed\n");
             UmlObject top = findTopObject(x, y);
             if (top == null)
                 System.out.printf("line mouse pressed top == null\n");
             if (top != null) {
+                pressed = true;
                 top.setSelected(true);
                 g2 = top.draw(g2);
                 repaint();
-                System.out.printf("top painted\n");
+//                System.out.printf("top painted\n");
                 associationLine = new AssociationLine();
                 associationLine.setStartObject(top);
                 associationLine.setStartX(x);
@@ -247,11 +285,11 @@ public class MainCanvas extends Canvas {
 
         @Override
         public void mouseReleased(int x, int y) {
-            System.out.printf("line release\n");
-            UmlObject top = findTopObject(x, y);
-            if(top == null){
-                System.out.printf("line released top = null\n");
+            if (!pressed) {
+                return;
             }
+//            System.out.printf("line release\n");
+            UmlObject top = findTopObject(x, y);
             if (top != null) {
                 top.setSelected(true);
                 g2 = top.draw(g2);
@@ -269,6 +307,8 @@ public class MainCanvas extends Canvas {
     }
 
     public class GeneralizationLineBtnMode implements MouseMode {
+        boolean pressed = false;
+
         @Override
         public void mouseClicked(int x, int y) {
 
@@ -278,6 +318,7 @@ public class MainCanvas extends Canvas {
         public void mousePressed(int x, int y) {
             UmlObject top = findTopObject(x, y);
             if (top != null) {
+                pressed = true;
                 top.setSelected(true);
                 g2 = top.draw(g2);
                 repaint();
@@ -296,6 +337,8 @@ public class MainCanvas extends Canvas {
 
         @Override
         public void mouseReleased(int x, int y) {
+            if (!pressed)
+                return;
             UmlObject top = findTopObject(x, y);
             if (top != null) {
                 top.setSelected(true);
@@ -312,6 +355,8 @@ public class MainCanvas extends Canvas {
     }
 
     public class CompositionLineBtnMode implements MouseMode {
+        boolean pressed = false;
+
         @Override
         public void mouseClicked(int x, int y) {
 
@@ -321,6 +366,7 @@ public class MainCanvas extends Canvas {
         public void mousePressed(int x, int y) {
             UmlObject top = findTopObject(x, y);
             if (top != null) {
+                pressed = true;
                 top.setSelected(true);
                 g2 = top.draw(g2);
                 repaint();
@@ -338,6 +384,8 @@ public class MainCanvas extends Canvas {
 
         @Override
         public void mouseReleased(int x, int y) {
+            if (!pressed)
+                return;
             UmlObject top = findTopObject(x, y);
             if (top != null) {
                 top.setSelected(true);
@@ -411,6 +459,20 @@ public class MainCanvas extends Canvas {
         g2.fillRect(0, 0, getSize().width, getSize().height);
         g2.setPaint(Color.black);
         repaint();
+    }
+
+    void changeObjectName(String name) {
+        for (int i = 0; i < paintedObject.size(); i++) {
+            if (((UmlObject) paintedObject.get(i)).getSelected()) {
+                ((UmlObject) paintedObject.get(i)).setObjectName(name);
+                System.out.printf("change name\n");
+            }
+        }
+        drawPaintedObject();
+    }
+
+    void groupObject() {
+
     }
 
     class MouseMotion extends MouseAdapter {
