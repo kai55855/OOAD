@@ -2,17 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edbc6c5c-cd2e-43b4-8f18-b4078bfaafef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GroupObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOAD/MainCanvas$MouseMotion.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainCanvas$MouseMotion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOAD/MainCanvas.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainCanvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/OOAD/MainFrame.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationLine.java" afterPath="$PROJECT_DIR$/src/AssociationLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClassObject.java" afterPath="$PROJECT_DIR$/src/ClassObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CompositionLine.java" afterPath="$PROJECT_DIR$/src/CompositionLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GeneralizationLine.java" afterPath="$PROJECT_DIR$/src/GeneralizationLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainCanvas.java" afterPath="$PROJECT_DIR$/src/MainCanvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainFrame.java" afterPath="$PROJECT_DIR$/src/MainFrame.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/AssociationLineBtn.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/AssociationLineMode.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Button.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/ClassBtn.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/ClassMode.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/CompositionLineBtn.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/CompositionLineMode.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/GeneralizationLineBtn.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/GeneralizationLineMode.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Shape.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/UseCaseBtn.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/UseCaseMode.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOAD/MainCanvas$MouseMotion.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainCanvas$MouseMotion.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOAD/MainCanvas.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainCanvas.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOAD/MainFrame.class" afterPath="$PROJECT_DIR$/out/production/OOAD/MainFrame.class" />
+      <change beforePath="$PROJECT_DIR$/src/MainCanvas.java" afterPath="$PROJECT_DIR$/src/MainCanvas.java" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" afterPath="$PROJECT_DIR$/src/MainFrame.java" />
+      <change beforePath="$PROJECT_DIR$/src/SelectBtn.java" afterPath="$PROJECT_DIR$/src/SelectBtn.java" />
+      <change beforePath="$PROJECT_DIR$/src/SelectMode.java" afterPath="$PROJECT_DIR$/src/SelectMode.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,19 +36,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="60" column="49" lean-forward="false" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+            <state relative-caret-position="296">
+              <caret line="28" column="81" lean-forward="false" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1161#1162#0" expanded="true" />
-                <element signature="e#2123#2124#0" expanded="true" />
-                <element signature="e#2195#2196#0" expanded="true" />
-                <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
-                <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
+                <element signature="e#1216#1217#0" expanded="true" />
+                <element signature="e#1269#1270#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectBtn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SelectBtn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Button.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Button.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,63 +81,24 @@
       <file leaf-file-name="MainCanvas.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="474" column="0" lean-forward="false" selection-start-line="474" selection-start-column="0" selection-end-line="474" selection-end-column="0" />
+            <state relative-caret-position="-442">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#changeMouseMode#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#SelectBtnMode#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#ClassBtnMode#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#UseCaseBtnMode#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#AssociationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#GeneralizationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#CompositionLineBtnMode#0;class#MainCanvas#0" expanded="false" />
                 <element signature="method#findTopObject#0;class#MainCanvas#0" expanded="false" />
                 <element signature="method#drawPaintedObject#0;class#MainCanvas#0" expanded="false" />
                 <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
                 <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
                 <element signature="method#changeObjectName#0;class#MainCanvas#0" expanded="false" />
-                <element signature="class#MouseMotion#0;class#MainCanvas#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GroupObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UseCaseObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UseCaseObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="812">
-              <caret line="29" column="70" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#clicked#0;class#UseCaseObject#0" expanded="false" />
-                <element signature="method#move#0;class#UseCaseObject#0" expanded="false" />
-                <element signature="method#hit#0;class#UseCaseObject#0" expanded="false" />
-                <element signature="method#linePoint#0;class#UseCaseObject#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#clicked#0;class#ClassObject#0" expanded="false" />
-                <element signature="method#hit#0;class#ClassObject#0" expanded="false" />
+                <element signature="method#groupObject#0;class#MainCanvas#0" expanded="false" />
+                <element signature="e#4783#4784#0" expanded="true" />
+                <element signature="e#4834#4835#0" expanded="true" />
+                <element signature="e#4885#4886#0" expanded="true" />
+                <element signature="e#4937#4938#0" expanded="true" />
+                <element signature="e#4987#4988#0" expanded="true" />
+                <element signature="e#5038#5039#0" expanded="true" />
+                <element signature="e#5088#5089#0" expanded="true" />
+                <element signature="e#5139#5140#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,96 +107,22 @@
       <file leaf-file-name="UmlObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UmlObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="22" />
+            <state relative-caret-position="1260">
+              <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="28" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#870#871#0" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
-                <element signature="e#929#930#0" expanded="true" />
+                <element signature="method#UmlObject#0;class#UmlObject#0" expanded="false" />
+                <element signature="method#setDepth#0;class#UmlObject#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MouseMode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MouseMode.java">
+      <file leaf-file-name="Shape.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompositionLine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CompositionLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-              <folding>
-                <element signature="e#96#97#0" expanded="true" />
-                <element signature="e#119#120#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AssociationLine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AssociationLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-              <folding>
-                <element signature="e#97#98#0" expanded="true" />
-                <element signature="e#120#121#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UmlLine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UmlLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
-              <folding>
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-                <element signature="e#634#635#0" expanded="true" />
-                <element signature="e#669#670#0" expanded="true" />
-                <element signature="e#707#708#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#805#806#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
-                <element signature="e#867#868#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#962#963#0" expanded="true" />
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1020#1021#0" expanded="true" />
-                <element signature="e#1112#1113#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
-                <element signature="e#1179#1180#0" expanded="true" />
-                <element signature="e#1215#1216#0" expanded="true" />
-                <element signature="e#1237#1238#0" expanded="true" />
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#1300#1301#0" expanded="true" />
-                <element signature="e#1332#1333#0" expanded="true" />
-                <element signature="e#1352#1353#0" expanded="true" />
-                <element signature="e#1384#1385#0" expanded="true" />
-                <element signature="e#1413#1414#0" expanded="true" />
-                <element signature="e#1445#1446#0" expanded="true" />
-                <element signature="e#1465#1466#0" expanded="true" />
-                <element signature="e#1497#1498#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -219,28 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Rectangle</find>
-      <find>click</find>
-      <find>enableenable</find>
-      <find>drawUseCaseObject</find>
-      <find>new</find>
-      <find>main</find>
-      <find>System.out</find>
-      <find>hit</find>
-      <find>+</find>
-      <find>sort</find>
-      <find>enable</find>
-      <find>repaint</find>
-      <find>enableDrag</find>
-      <find>ellipse2D</find>
-      <find>selectBtnMode</find>
-      <find>prevUMLObject</find>
-      <find>associationLine</find>
-      <find>drawPainted</find>
-      <find>move</find>
-      <find>drawP</find>
-      <find>drawPaintedObject</find>
-      <find>top painted</find>
       <find>findTopObject</find>
       <find>point</find>
       <find>usecase selected</find>
@@ -249,6 +147,28 @@
       <find>item1</find>
       <find>in x</find>
       <find>getLined</find>
+      <find>umlBtn</find>
+      <find>controlPanel</find>
+      <find>SelectBtn</find>
+      <find>g2</find>
+      <find>graphic</find>
+      <find>Canvaspaint(</find>
+      <find>repaint</find>
+      <find>setBtnsToWhite</find>
+      <find>paint()</find>
+      <find>addActionListener</find>
+      <find>paint(</find>
+      <find>SelectBtnMode</find>
+      <find>SelectMode</find>
+      <find>selectBtn</find>
+      <find>Maincanvas</find>
+      <find>setMouseM</find>
+      <find>clicked</find>
+      <find>mainCanvas</find>
+      <find>ClassBtn</find>
+      <find>find</find>
+      <find>GeneralizationLineBtnMode</find>
+      <find>useCaseBtn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -256,7 +176,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="2.0" />
       </map>
     </option>
   </component>
@@ -272,9 +192,6 @@
         <option value="$PROJECT_DIR$/src/MouseAdapterDemo.java" />
         <option value="$PROJECT_DIR$/src/CreateUseCase.java" />
         <option value="$PROJECT_DIR$/src/UMLeditor.java" />
-        <option value="$PROJECT_DIR$/src/UseCaseBtn.java" />
-        <option value="$PROJECT_DIR$/src/ClassBtn.java" />
-        <option value="$PROJECT_DIR$/src/SelectBtn.java" />
         <option value="$PROJECT_DIR$/src/MouseClick.java" />
         <option value="$PROJECT_DIR$/src/UseCaseBtnClick.java" />
         <option value="$PROJECT_DIR$/src/ClassBtnClick.java" />
@@ -287,15 +204,28 @@
         <option value="$PROJECT_DIR$/src/AssociationLineArrow.java" />
         <option value="$PROJECT_DIR$/src/AssociltionLine.java" />
         <option value="$PROJECT_DIR$/src/UmlLine.java" />
-        <option value="$PROJECT_DIR$/src/UseCaseObject.java" />
-        <option value="$PROJECT_DIR$/src/UmlObject.java" />
         <option value="$PROJECT_DIR$/src/AssociationLine.java" />
         <option value="$PROJECT_DIR$/src/GeneralizationLine.java" />
         <option value="$PROJECT_DIR$/src/CompositionLine.java" />
-        <option value="$PROJECT_DIR$/src/ClassObject.java" />
         <option value="$PROJECT_DIR$/src/GroupObject.java" />
-        <option value="$PROJECT_DIR$/src/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/UmlObject.java" />
+        <option value="$PROJECT_DIR$/src/UseCaseObject.java" />
+        <option value="$PROJECT_DIR$/src/ClassObject.java" />
+        <option value="$PROJECT_DIR$/src/SelectMode.java" />
+        <option value="$PROJECT_DIR$/src/ClassMode.java" />
+        <option value="$PROJECT_DIR$/src/AssociationLineMode.java" />
+        <option value="$PROJECT_DIR$/src/UseCaseMode.java" />
+        <option value="$PROJECT_DIR$/src/GeneralizationLineMode.java" />
+        <option value="$PROJECT_DIR$/src/CompositionLineMode.java" />
         <option value="$PROJECT_DIR$/src/MainCanvas.java" />
+        <option value="$PROJECT_DIR$/src/Button.java" />
+        <option value="$PROJECT_DIR$/src/SelectBtn.java" />
+        <option value="$PROJECT_DIR$/src/UseCaseBtn.java" />
+        <option value="$PROJECT_DIR$/src/ClassBtn.java" />
+        <option value="$PROJECT_DIR$/src/AssociationLineBtn.java" />
+        <option value="$PROJECT_DIR$/src/GeneralizationLineBtn.java" />
+        <option value="$PROJECT_DIR$/src/CompositionLineBtn.java" />
+        <option value="$PROJECT_DIR$/src/MainFrame.java" />
       </list>
     </option>
   </component>
@@ -323,7 +253,6 @@
     <panes>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -340,13 +269,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
@@ -362,6 +292,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.MainFrame">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
     <configuration name="CreateUseCase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="CreateUseCase" />
@@ -418,13 +355,6 @@
       <module name="OOAD" />
       <envs />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -458,12 +388,6 @@
       </option>
       <envs />
       <patterns />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -499,6 +423,12 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.MainFrame" />
       <item index="1" class="java.lang.String" itemvalue="Application.MouseAdapterDemo" />
@@ -521,6 +451,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -600,7 +533,21 @@
       <option name="project" value="LOCAL" />
       <updated>1510669301463</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finish change name">
+      <created>1510723498693</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1510723498693</updated>
+    </task>
+    <task id="LOCAL-00012" summary="start refactor">
+      <created>1514048569197</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1514048569197</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -613,11 +560,12 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23460722" sideWeight="0.50208336" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23460722" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" x="1" y="738" width="1916" height="308" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22399151" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" x="1" y="738" width="1916" height="308" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11145833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -629,7 +577,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -645,14 +592,16 @@
     <MESSAGE value="finish AssociationLine, GeneralizationLine" />
     <MESSAGE value="before mi" />
     <MESSAGE value="finish all the Line function" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish all the Line function" />
+    <MESSAGE value="finish change name" />
+    <MESSAGE value="start refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="start refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainFrame.java</url>
-          <line>176</line>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -662,377 +611,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Canvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2464">
-          <caret line="113" column="59" lean-forward="true" selection-start-line="113" selection-start-column="55" selection-end-line="113" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#changeMouseMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#SelectBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#ClassBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#UseCaseBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#AssociationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#GeneralizationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#CompositionLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#findTopObject#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#drawPaintedObject#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#changeObjectName#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#MouseMotion#0;class#MainCanvas#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLeditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2195#2196#0" expanded="true" />
-            <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
-            <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#clicked#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#hit#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#linePoint#0;class#ClassObject#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UseCaseBtnClick.java" />
-    <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
+    <entry file="file://$PROJECT_DIR$/src/UmlObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="588">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#changeMouseMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#SelectBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#ClassBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#UseCaseBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#AssociationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#GeneralizationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#CompositionLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#findTopObject#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#drawPaintedObject#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
-            <element signature="method#changeObjectName#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#MouseMotion#0;class#MainCanvas#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2195#2196#0" expanded="true" />
-            <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
-            <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MouseAdapterDemo.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/MouseMotionAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CreateUseCase.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/javax/swing/JFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="126" column="1" lean-forward="true" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/javax/swing/JButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5593">
-          <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/EventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/javax/swing/JComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="776" column="25" lean-forward="true" selection-start-line="776" selection-start-column="25" selection-end-line="776" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/javax/swing/JPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="64" column="33" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UseCaseBtnClick.java" />
-    <entry file="file://$PROJECT_DIR$/src/ClassBtnClick.java" />
-    <entry file="file://$PROJECT_DIR$/src/SelectBtnClick.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/javax/swing/DebugGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12320">
-          <caret line="508" column="16" lean-forward="false" selection-start-line="508" selection-start-column="16" selection-end-line="508" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Canvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="139" column="33" lean-forward="false" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-394">
-          <caret line="3378" column="16" lean-forward="false" selection-start-line="3378" selection-start-column="16" selection-end-line="3378" selection-end-column="16" />
-          <folding>
-            <element signature="e#114480#114481#0" expanded="false" />
-            <element signature="e#114527#114528#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Graphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="394" column="30" lean-forward="true" selection-start-line="394" selection-start-column="25" selection-end-line="394" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Graphics2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="406" column="22" lean-forward="false" selection-start-line="406" selection-start-column="22" selection-end-line="406" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470">
-          <caret line="45" column="22" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/MouseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="56" column="17" lean-forward="false" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/MouseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="69" column="87" lean-forward="true" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/MouseMotionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/geom/Arc2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/geom/RectangularShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/geom/Rectangle2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="42" column="55" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/geom/Ellipse2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestVector.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8989">
-          <caret line="118" column="13" lean-forward="false" selection-start-line="118" selection-start-column="13" selection-end-line="118" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UMLeditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UmlButton.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/ActionEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1533">
-          <caret line="59" column="13" lean-forward="false" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/ActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SortUmlObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AssociationLineArrow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CanvasBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneralizationLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="e#102#103#0" expanded="true" />
-            <element signature="e#125#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompositionLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <element signature="e#96#97#0" expanded="true" />
-            <element signature="e#119#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UmlLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
-          <folding>
-            <element signature="e#511#512#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1179#1180#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1332#1333#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1413#1414#0" expanded="true" />
-            <element signature="e#1445#1446#0" expanded="true" />
-            <element signature="e#1465#1466#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AssociationLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding>
-            <element signature="e#97#98#0" expanded="true" />
-            <element signature="e#120#121#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#UmlObject#0;class#UmlObject#0" expanded="false" />
+            <element signature="e#1631#1632#0" expanded="false" />
+            <element signature="e#1675#1676#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1045,94 +645,665 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UseCaseObject.java">
+    <entry file="file://$PROJECT_DIR$/src/CompositionLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="29" column="70" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#clicked#0;class#UseCaseObject#0" expanded="false" />
-            <element signature="method#move#0;class#UseCaseObject#0" expanded="false" />
-            <element signature="method#hit#0;class#UseCaseObject#0" expanded="false" />
-            <element signature="method#linePoint#0;class#UseCaseObject#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#clicked#0;class#ClassObject#0" expanded="false" />
-            <element signature="method#hit#0;class#ClassObject#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UmlObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GroupObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="364">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="e#97#98#0" expanded="false" />
+            <element signature="e#120#121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UmlLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+          <folding>
+            <element signature="e#511#512#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#634#635#0" expanded="false" />
+            <element signature="e#669#670#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#742#743#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#805#806#0" expanded="false" />
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
+            <element signature="e#962#963#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1112#1113#0" expanded="false" />
+            <element signature="e#1146#1147#0" expanded="false" />
+            <element signature="e#1179#1180#0" expanded="false" />
+            <element signature="e#1215#1216#0" expanded="false" />
+            <element signature="e#1237#1238#0" expanded="false" />
+            <element signature="e#1271#1272#0" expanded="false" />
+            <element signature="e#1300#1301#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1384#1385#0" expanded="false" />
+            <element signature="e#1413#1414#0" expanded="false" />
+            <element signature="e#1445#1446#0" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1497#1498#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="474" column="0" lean-forward="false" selection-start-line="474" selection-start-column="0" selection-end-line="474" selection-end-column="0" />
+        <state relative-caret-position="1428">
+          <caret line="69" column="33" lean-forward="false" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#changeMouseMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#SelectBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#ClassBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#UseCaseBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#AssociationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#GeneralizationLineBtnMode#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#CompositionLineBtnMode#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#findTopObject#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#drawPaintedObject#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
             <element signature="method#changeObjectName#0;class#MainCanvas#0" expanded="false" />
-            <element signature="class#MouseMotion#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#groupObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="e#4783#4784#0" expanded="true" />
+            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#4885#4886#0" expanded="true" />
+            <element signature="e#4937#4938#0" expanded="true" />
+            <element signature="e#4987#4988#0" expanded="true" />
+            <element signature="e#5038#5039#0" expanded="true" />
+            <element signature="e#5088#5089#0" expanded="true" />
+            <element signature="e#5139#5140#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="60" column="49" lean-forward="false" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+        <state relative-caret-position="4816">
+          <caret line="190" column="5" lean-forward="false" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2195#2196#0" expanded="true" />
-            <element signature="class#SelectBtn#0;class#MainFrame#0" expanded="false" />
-            <element signature="class#UseCaseBtn#0;class#MainFrame#0" expanded="false" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UseCaseObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2716">
+          <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#move#0;class#UseCaseObject#0" expanded="false" />
+            <element signature="method#hit#0;class#UseCaseObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#clicked#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#hit#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#linePoint#0;class#ClassObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UmlObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#UmlObject#0;class#UmlObject#0" expanded="false" />
+            <element signature="e#1631#1632#0" expanded="false" />
+            <element signature="e#1675#1676#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MouseMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompositionLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="e#97#98#0" expanded="false" />
+            <element signature="e#120#121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UmlLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+          <folding>
+            <element signature="e#511#512#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#634#635#0" expanded="false" />
+            <element signature="e#669#670#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#742#743#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#805#806#0" expanded="false" />
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
+            <element signature="e#962#963#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1112#1113#0" expanded="false" />
+            <element signature="e#1146#1147#0" expanded="false" />
+            <element signature="e#1179#1180#0" expanded="false" />
+            <element signature="e#1215#1216#0" expanded="false" />
+            <element signature="e#1237#1238#0" expanded="false" />
+            <element signature="e#1271#1272#0" expanded="false" />
+            <element signature="e#1300#1301#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1384#1385#0" expanded="false" />
+            <element signature="e#1413#1414#0" expanded="false" />
+            <element signature="e#1445#1446#0" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1497#1498#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1932">
+          <caret line="69" column="33" lean-forward="false" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findTopObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#drawPaintedObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#changeObjectName#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#groupObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="e#4783#4784#0" expanded="true" />
+            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#4885#4886#0" expanded="true" />
+            <element signature="e#4937#4938#0" expanded="true" />
+            <element signature="e#4987#4988#0" expanded="true" />
+            <element signature="e#5038#5039#0" expanded="true" />
+            <element signature="e#5088#5089#0" expanded="true" />
+            <element signature="e#5139#5140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5880">
+          <caret line="399" column="5" lean-forward="false" selection-start-line="399" selection-start-column="5" selection-end-line="399" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findTopObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#drawPaintedObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#changeObjectName#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#groupObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="e#4783#4784#0" expanded="true" />
+            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#4885#4886#0" expanded="true" />
+            <element signature="e#4937#4938#0" expanded="true" />
+            <element signature="e#4987#4988#0" expanded="true" />
+            <element signature="e#5038#5039#0" expanded="true" />
+            <element signature="e#5088#5089#0" expanded="true" />
+            <element signature="e#5139#5140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UseCaseObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2716">
+          <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#move#0;class#UseCaseObject#0" expanded="false" />
+            <element signature="method#hit#0;class#UseCaseObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#clicked#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#hit#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#linePoint#0;class#ClassObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UmlObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#UmlObject#0;class#UmlObject#0" expanded="false" />
+            <element signature="e#1631#1632#0" expanded="false" />
+            <element signature="e#1675#1676#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MouseMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompositionLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="e#97#98#0" expanded="false" />
+            <element signature="e#120#121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UmlLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+          <folding>
+            <element signature="e#511#512#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#634#635#0" expanded="false" />
+            <element signature="e#669#670#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#742#743#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#805#806#0" expanded="false" />
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
+            <element signature="e#962#963#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1112#1113#0" expanded="false" />
+            <element signature="e#1146#1147#0" expanded="false" />
+            <element signature="e#1179#1180#0" expanded="false" />
+            <element signature="e#1215#1216#0" expanded="false" />
+            <element signature="e#1237#1238#0" expanded="false" />
+            <element signature="e#1271#1272#0" expanded="false" />
+            <element signature="e#1300#1301#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1384#1385#0" expanded="false" />
+            <element signature="e#1413#1414#0" expanded="false" />
+            <element signature="e#1445#1446#0" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1497#1498#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompositionLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding>
+            <element signature="e#97#98#0" expanded="false" />
+            <element signature="e#120#121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UmlLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+          <folding>
+            <element signature="e#511#512#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#634#635#0" expanded="false" />
+            <element signature="e#669#670#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#742#743#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#805#806#0" expanded="false" />
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
+            <element signature="e#962#963#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1112#1113#0" expanded="false" />
+            <element signature="e#1146#1147#0" expanded="false" />
+            <element signature="e#1179#1180#0" expanded="false" />
+            <element signature="e#1215#1216#0" expanded="false" />
+            <element signature="e#1237#1238#0" expanded="false" />
+            <element signature="e#1271#1272#0" expanded="false" />
+            <element signature="e#1300#1301#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+            <element signature="e#1352#1353#0" expanded="false" />
+            <element signature="e#1384#1385#0" expanded="false" />
+            <element signature="e#1413#1414#0" expanded="false" />
+            <element signature="e#1445#1446#0" expanded="false" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1497#1498#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClassObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#clicked#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#hit#0;class#ClassObject#0" expanded="false" />
+            <element signature="method#linePoint#0;class#ClassObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UseCaseObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2464">
+          <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#move#0;class#UseCaseObject#0" expanded="false" />
+            <element signature="method#hit#0;class#UseCaseObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="118" column="35" lean-forward="false" selection-start-line="118" selection-start-column="29" selection-end-line="118" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SelectMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#175#176#0" expanded="false" />
+            <element signature="e#211#212#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/EventQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="702" column="0" lean-forward="false" selection-start-line="702" selection-start-column="0" selection-end-line="702" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="6535" column="0" lean-forward="false" selection-start-line="6535" selection-start-column="0" selection-end-line="6535" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MouseMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClassMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="e#107#108#0" expanded="false" />
+            <element signature="e#143#144#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UseCaseMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#112#113#0" expanded="false" />
+            <element signature="e#148#149#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationLineMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="e#158#159#0" expanded="false" />
+            <element signature="e#194#195#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GeneralizationLineMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="e#164#165#0" expanded="false" />
+            <element signature="e#200#201#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompositionLineMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+          <folding>
+            <element signature="e#157#158#0" expanded="false" />
+            <element signature="e#193#194#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findTopObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#drawPaintedObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#paint#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#clear#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#changeObjectName#0;class#MainCanvas#0" expanded="false" />
+            <element signature="method#groupObject#0;class#MainCanvas#0" expanded="false" />
+            <element signature="e#4783#4784#0" expanded="true" />
+            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#4885#4886#0" expanded="true" />
+            <element signature="e#4937#4938#0" expanded="true" />
+            <element signature="e#4987#4988#0" expanded="true" />
+            <element signature="e#5038#5039#0" expanded="true" />
+            <element signature="e#5088#5089#0" expanded="true" />
+            <element signature="e#5139#5140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SelectBtn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UseCaseBtn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GeneralizationLineBtn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompositionLineBtn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationLineBtn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClassBtn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="28" column="81" lean-forward="false" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UmlObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="28" />
+          <folding>
+            <element signature="method#UmlObject#0;class#UmlObject#0" expanded="false" />
+            <element signature="method#setDepth#0;class#UmlObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

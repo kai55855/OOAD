@@ -21,12 +21,12 @@ public class MainFrame extends JFrame {
 
     MainCanvas mainCanvas = new MainCanvas();
     Vector umlBtn = new Vector();
-    SelectBtn selectBtn = new SelectBtn(mainCanvas);
-    UseCaseBtn useCaseBtn = new UseCaseBtn();
-    ClassBtn classBtn = new ClassBtn();
-    AssociationLineBtn associationBtn = new AssociationLineBtn();
-    GeneralizationLineBtn generalizationBtn = new GeneralizationLineBtn();
-    CompositionLineBtn compositionBtn = new CompositionLineBtn();
+    SelectBtn selectBtn = new SelectBtn(mainCanvas, umlBtn);
+    UseCaseBtn useCaseBtn = new UseCaseBtn(mainCanvas, umlBtn);
+    ClassBtn classBtn = new ClassBtn(mainCanvas, umlBtn);
+    AssociationLineBtn associationBtn = new AssociationLineBtn(mainCanvas, umlBtn);
+    GeneralizationLineBtn generalizationBtn = new GeneralizationLineBtn(mainCanvas, umlBtn);
+    CompositionLineBtn compositionBtn = new CompositionLineBtn(mainCanvas, umlBtn);
 
 
     public static void main(String[] args) {
@@ -94,101 +94,7 @@ public class MainFrame extends JFrame {
         }
     }
 
-//    class SelectBtn extends JButton {
-//        public SelectBtn() {
-//            super("Select");
-//            this.addActionListener(new SelectBtn.SelectBtnAction());
-//        }
-//
-//        class SelectBtnAction implements ActionListener {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                mainCanvas.changeMouseMode(1);
-//                setBtnsToWhite();
-//                setBackground(Color.gray);
-//            }
-//        }
-//    }
 
-    class AssociationLineBtn extends JButton {
-        public AssociationLineBtn() {
-            super("Association Line");
-            this.addActionListener(new AssociationLineBtn.AssociationLineBtnAction());
-        }
-
-        class AssociationLineBtnAction implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainCanvas.changeMouseMode(2);
-                setBtnsToWhite();
-                setBackground(Color.gray);
-            }
-        }
-    }
-
-    class GeneralizationLineBtn extends JButton {
-        public GeneralizationLineBtn() {
-            super("Generalization Line");
-            this.addActionListener(new GeneralizationLineBtn.GeneralizationLineBtnAction());
-        }
-
-        class GeneralizationLineBtnAction implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainCanvas.changeMouseMode(3);
-                setBtnsToWhite();
-                setBackground(Color.gray);
-            }
-        }
-    }
-
-    class CompositionLineBtn extends JButton {
-        public CompositionLineBtn() {
-            super("Composition Line");
-            this.addActionListener(new CompositionLineBtn.CompositionLIneBtnAction());
-        }
-
-        class CompositionLIneBtnAction implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainCanvas.changeMouseMode(4);
-                setBtnsToWhite();
-                setBackground(Color.gray);
-            }
-        }
-    }
-
-    class ClassBtn extends JButton {
-        public ClassBtn() {
-            super("Class");
-            this.addActionListener(new ClassBtnAction());
-        }
-
-        class ClassBtnAction implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainCanvas.changeMouseMode(5);
-                setBtnsToWhite();
-                setBackground(Color.gray);
-            }
-        }
-    }
-
-    class UseCaseBtn extends JButton {
-        public UseCaseBtn() {
-            super("Use Case");
-            this.addActionListener(new UseCaseBtnAction());
-        }
-
-        class UseCaseBtnAction implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainCanvas.changeMouseMode(6);
-                setBtnsToWhite();
-                setBackground(Color.gray);
-            }
-        }
-    }
 
 
 }
