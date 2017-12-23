@@ -31,6 +31,9 @@ public class ClassObject extends UmlObject{
         g2.draw(method);
         g2.setColor(Color.white);
         g2.drawString(objectName, this.getX(), this.getY() + 20);
+        for(int i = 0;i < group.size();i++){
+            g2 = ((UmlObject)group.get(i)).draw(g2);
+        }
         return g2;
     }
 

@@ -28,6 +28,10 @@ public class UseCaseObject extends  UmlObject{
         g2.fill(ellipse2D);
         g2.setColor(Color.white);
         g2.drawString(objectName, this.getX() + 15, this.getY() + 25);
+        System.out.printf("group = %d\n", group.size());
+        for(int i = 0;i < group.size();i++){
+            g2 = ((UmlObject)group.get(i)).draw(g2);
+        }
         return g2;
     }
 

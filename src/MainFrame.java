@@ -21,7 +21,7 @@ public class MainFrame extends JFrame {
 
     MainCanvas mainCanvas = new MainCanvas();
     Vector umlBtn = new Vector();
-    SelectBtn selectBtn = new SelectBtn();
+    SelectBtn selectBtn = new SelectBtn(mainCanvas);
     UseCaseBtn useCaseBtn = new UseCaseBtn();
     ClassBtn classBtn = new ClassBtn();
     AssociationLineBtn associationBtn = new AssociationLineBtn();
@@ -94,21 +94,21 @@ public class MainFrame extends JFrame {
         }
     }
 
-    class SelectBtn extends JButton {
-        public SelectBtn() {
-            super("Select");
-            this.addActionListener(new SelectBtn.SelectBtnAction());
-        }
-
-        class SelectBtnAction implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mainCanvas.changeMouseMode(1);
-                setBtnsToWhite();
-                setBackground(Color.gray);
-            }
-        }
-    }
+//    class SelectBtn extends JButton {
+//        public SelectBtn() {
+//            super("Select");
+//            this.addActionListener(new SelectBtn.SelectBtnAction());
+//        }
+//
+//        class SelectBtnAction implements ActionListener {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                mainCanvas.changeMouseMode(1);
+//                setBtnsToWhite();
+//                setBackground(Color.gray);
+//            }
+//        }
+//    }
 
     class AssociationLineBtn extends JButton {
         public AssociationLineBtn() {

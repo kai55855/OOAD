@@ -3,6 +3,7 @@ import java.awt.geom.Ellipse2D;
 import java.util.Vector;
 
 public abstract class UmlObject {
+    protected Vector group;
     protected int depth, x, y, width, height;
     protected  boolean selected, lined;
     protected String objectName;
@@ -20,6 +21,7 @@ public abstract class UmlObject {
         setY(y);
         setDepth(depth);
         setObjectName(objectName);
+        group = new Vector();
     }
 
     void setLined(boolean lined){

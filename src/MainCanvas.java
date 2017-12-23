@@ -18,13 +18,12 @@ public class MainCanvas extends Canvas {
     private AssociationLineBtnMode associationLineBtnMode;
     private GeneralizationLineBtnMode generalizationLineBtnMode;
     private CompositionLineBtnMode compositionLineBtnMode;
-    private Vector paintedObject;
-    private Vector paintedLine;
+    public Vector paintedObject;
+    public Vector paintedLine;
     UmlObject prevUMLObject;
     AssociationLine associationLine;
     GeneralizationLine generalizationLine;
     CompositionLine compositionLine;
-    GroupObject groupObject;
 
     int pressedX, pressedY;
 
@@ -43,7 +42,6 @@ public class MainCanvas extends Canvas {
         compositionLineBtnMode = new CompositionLineBtnMode();
         paintedObject = new Vector();
         paintedLine = new Vector();
-        groupObject = new GroupObject();
         pressedX = 0;
         pressedY = 0;
         changeMouseMode(1);
@@ -94,92 +92,92 @@ public class MainCanvas extends Canvas {
 
         @Override
         public void mouseClicked(int x, int y) {
-//            System.out.println("this is select btn clicked");
-            paintedObject.sort(new SortUmlObject());
-            for (int i = paintedObject.size() - 1; i >= 0; i--) {
-                System.out.printf("%d, ", ((UmlObject) paintedObject.get(i)).getDepth());
-            }
-            System.out.printf("\n");
-            for (int i = paintedObject.size() - 1; i >= 0; i--) {
-//                if (((UmlObject) paintedObject.get(i)).getLined() || ((UmlObject) paintedObject.get(i)).clicked(x, y, g2)) {
-                if (((UmlObject) paintedObject.get(i)).clicked(x, y, g2))
-                    ((UmlObject) paintedObject.get(i)).setSelected(true);
-                else {
-                    ((UmlObject) paintedObject.get(i)).setSelected(false);
-                }
-            }
-
-            drawPaintedObject();
+////            System.out.println("this is select btn clicked");
+//            paintedObject.sort(new SortUmlObject());
+//            for (int i = paintedObject.size() - 1; i >= 0; i--) {
+//                System.out.printf("%d, ", ((UmlObject) paintedObject.get(i)).getDepth());
+//            }
+//            System.out.printf("\n");
+//            for (int i = paintedObject.size() - 1; i >= 0; i--) {
+////                if (((UmlObject) paintedObject.get(i)).getLined() || ((UmlObject) paintedObject.get(i)).clicked(x, y, g2)) {
+//                if (((UmlObject) paintedObject.get(i)).clicked(x, y, g2))
+//                    ((UmlObject) paintedObject.get(i)).setSelected(true);
+//                else {
+//                    ((UmlObject) paintedObject.get(i)).setSelected(false);
+//                }
+//            }
+//
+//            drawPaintedObject();
         }
 
         @Override
         public void mousePressed(int x, int y) {
-//            System.out.println("this is select btn pressed");
-            pressed = 0;
-            dragged = 0;
-            prevUMLObject = findTopObject(x, y);
-//            paintedObject.remove(prevUMLObject);
-            if (prevUMLObject != null)
-                pressed = 1;
-            else {
-                pressedX = x;
-                pressedY = y;
-            }
+////            System.out.println("this is select btn pressed");
+//            pressed = 0;
+//            dragged = 0;
+//            prevUMLObject = findTopObject(x, y);
+////            paintedObject.remove(prevUMLObject);
+//            if (prevUMLObject != null)
+//                pressed = 1;
+//            else {
+//                pressedX = x;
+//                pressedY = y;
+//            }
         }
 
         @Override
         public void mouseDragged(int x, int y) {
-            if (pressed > 0) {
-//                paintedObject.remove(prevUMLObject);
-                clear();
-                prevUMLObject.move(x, y);
-                //paintedObject.add(prevUMLObject);
-                drawPaintedObject();
-                dragged = 1;
-            }
+//            if (pressed > 0) {
+////                paintedObject.remove(prevUMLObject);
+//                clear();
+//                prevUMLObject.move(x, y);
+//                //paintedObject.add(prevUMLObject);
+//                drawPaintedObject();
+//                dragged = 1;
+//            }
         }
 
         @Override
         public void mouseReleased(int x, int y) {
-//            System.out.println("this is select btn released");
-            if (dragged > 0 && pressed > 0) {
-//                paintedObject.remove(prevUMLObject);
-                clear();
-                prevUMLObject.move(x, y);
-                for (int i = 0; i < paintedObject.size(); i++) {
-                    if (prevUMLObject != (UmlObject) paintedObject.get(i) && prevUMLObject.getDepth() >= ((UmlObject) paintedObject.get(i)).getDepth() && prevUMLObject.hit((UmlObject) paintedObject.get(i), g2)) {
-                        ((UmlObject) paintedObject.get(i)).setDepth(((UmlObject) paintedObject.get(i)).getDepth() + 1);
-                    }
-                }
-//                paintedObject.add(prevUMLObject);
-                drawPaintedObject();
-            } else {
-                int releasedX = x, releasedY = y;
-                for (int i = 0; i < paintedObject.size(); i++) {
-//                    if(!((UmlObject)paintedObject.get(i)).getLined()){
-                    ((UmlObject) paintedObject.get(i)).setSelected(false);
+////            System.out.println("this is select btn released");
+//            if (dragged > 0 && pressed > 0) {
+////                paintedObject.remove(prevUMLObject);
+//                clear();
+//                prevUMLObject.move(x, y);
+//                for (int i = 0; i < paintedObject.size(); i++) {
+//                    if (prevUMLObject != (UmlObject) paintedObject.get(i) && prevUMLObject.getDepth() >= ((UmlObject) paintedObject.get(i)).getDepth() && prevUMLObject.hit((UmlObject) paintedObject.get(i), g2)) {
+//                        ((UmlObject) paintedObject.get(i)).setDepth(((UmlObject) paintedObject.get(i)).getDepth() + 1);
 //                    }
-                }
-                drawPaintedObject();
-                for (int i = 0; i < paintedObject.size(); i++) {
-                    int objX, objY, objW, objH;
-                    objX = ((UmlObject) paintedObject.get(i)).getX();
-                    objY = ((UmlObject) paintedObject.get(i)).getY();
-                    objW = ((UmlObject) paintedObject.get(i)).getWidth();
-                    objH = ((UmlObject) paintedObject.get(i)).getHeight();
-                    if ((objX >= pressedX && objX <= releasedX) || (objX <= pressedX && objX >= releasedX)) {
-                        if ((objY >= pressedY && objY <= releasedY) || (objY <= pressedY && objY >= releasedY)) {
-                            if ((objX + objW >= pressedX && objX + objW <= releasedX) || (objX + objW <= pressedX && objX + objW >= releasedX)) {
-                                if ((objY + objH >= pressedY && objY + objH <= releasedY) || (objY + objH <= pressedY && objY + objH >= releasedY)) {
-                                    ((UmlObject) paintedObject.get(i)).setSelected(true);
-                                    System.out.printf("pressedX = %d, pressedY = %d\n", pressedX, pressedY);
-                                }
-                            }
-                        }
-                    }
-                }
-                drawPaintedObject();
-            }
+//                }
+////                paintedObject.add(prevUMLObject);
+//                drawPaintedObject();
+//            } else {
+//                int releasedX = x, releasedY = y;
+//                for (int i = 0; i < paintedObject.size(); i++) {
+////                    if(!((UmlObject)paintedObject.get(i)).getLined()){
+//                    ((UmlObject) paintedObject.get(i)).setSelected(false);
+////                    }
+//                }
+//                drawPaintedObject();
+//                for (int i = 0; i < paintedObject.size(); i++) {
+//                    int objX, objY, objW, objH;
+//                    objX = ((UmlObject) paintedObject.get(i)).getX();
+//                    objY = ((UmlObject) paintedObject.get(i)).getY();
+//                    objW = ((UmlObject) paintedObject.get(i)).getWidth();
+//                    objH = ((UmlObject) paintedObject.get(i)).getHeight();
+//                    if ((objX >= pressedX && objX <= releasedX) || (objX <= pressedX && objX >= releasedX)) {
+//                        if ((objY >= pressedY && objY <= releasedY) || (objY <= pressedY && objY >= releasedY)) {
+//                            if ((objX + objW >= pressedX && objX + objW <= releasedX) || (objX + objW <= pressedX && objX + objW >= releasedX)) {
+//                                if ((objY + objH >= pressedY && objY + objH <= releasedY) || (objY + objH <= pressedY && objY + objH >= releasedY)) {
+//                                    ((UmlObject) paintedObject.get(i)).setSelected(true);
+//                                    System.out.printf("pressedX = %d, pressedY = %d\n", pressedX, pressedY);
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//                drawPaintedObject();
+//            }
         }
     }
 
@@ -428,6 +426,7 @@ public class MainCanvas extends Canvas {
         clear();
         paintedObject.sort(new SortUmlObject());
         g2.setPaint(Color.black);
+        System.out.printf("paintedObject size = %d\n", paintedObject.size());
         for (int i = 0; i < paintedObject.size(); i++) {
             g2 = ((UmlObject) paintedObject.get(i)).draw(g2);
         }
@@ -472,7 +471,24 @@ public class MainCanvas extends Canvas {
     }
 
     void groupObject() {
-
+//        System.out.printf("group btn\n");
+//        Vector groupVector = new Vector();
+//        UmlObject group = null;
+//        for (int i = 0; i < paintedObject.size(); i++) {
+//            if (((UmlObject) paintedObject.get(i)).getSelected()) {
+//                groupVector.add((UmlObject) paintedObject.get(i));
+//            }
+//        }
+////        for(int i = 0; i < groupVector.size(); i++){
+////            paintedObject.remove(((UmlObject) groupVector.get(i)));
+////        }
+//        group = (UmlObject)groupVector.get(0);
+//        groupVector.remove(group);
+//        for(int i = 0; i < groupVector.size(); i++){
+//            group.group.add(((UmlObject) groupVector.get(i)));
+//        }
+//        paintedObject.add(group);
+//        drawPaintedObject();
     }
 
     class MouseMotion extends MouseAdapter {
@@ -502,5 +518,5 @@ public class MainCanvas extends Canvas {
 
     }
 
-
+    void setMouseMode(MouseMode mouseMode) { this.mouseMode = mouseMode;}
 }
