@@ -21,12 +21,12 @@ public class MainFrame extends JFrame {
 
     MainCanvas mainCanvas = new MainCanvas();
     Vector umlBtn = new Vector();
-    SelectBtn selectBtn = new SelectBtn(mainCanvas, umlBtn);
-    UseCaseBtn useCaseBtn = new UseCaseBtn(mainCanvas, umlBtn);
-    ClassBtn classBtn = new ClassBtn(mainCanvas, umlBtn);
-    AssociationLineBtn associationBtn = new AssociationLineBtn(mainCanvas, umlBtn);
-    GeneralizationLineBtn generalizationBtn = new GeneralizationLineBtn(mainCanvas, umlBtn);
-    CompositionLineBtn compositionBtn = new CompositionLineBtn(mainCanvas, umlBtn);
+    Button selectBtn = new SelectBtn(mainCanvas, umlBtn);
+    Button useCaseBtn = new UseCaseBtn(mainCanvas, umlBtn);
+    Button classBtn = new ClassBtn(mainCanvas, umlBtn);
+    Button associationBtn = new AssociationLineBtn(mainCanvas, umlBtn);
+    Button generalizationBtn = new GeneralizationLineBtn(mainCanvas, umlBtn);
+    Button compositionBtn = new CompositionLineBtn(mainCanvas, umlBtn);
 
 
     public static void main(String[] args) {
@@ -74,9 +74,9 @@ public class MainFrame extends JFrame {
         umlBtn.add(selectBtn);
         umlBtn.add(useCaseBtn);
         umlBtn.add(classBtn);
-        umlBtn.add(associationBtn);
-        umlBtn.add(generalizationBtn);
-        umlBtn.add(compositionBtn);
+//        umlBtn.add(associationBtn);
+//        umlBtn.add(generalizationBtn);
+//        umlBtn.add(compositionBtn);
         for (int i = 0; i < umlBtn.size(); i++) {
             controlPanel.add((JButton) umlBtn.get(i));
         }
@@ -87,15 +87,6 @@ public class MainFrame extends JFrame {
         this.add(stateText, BorderLayout.SOUTH);
         this.setVisible(true);
     }
-
-    void setBtnsToWhite() {
-        for (int i = 0; i < umlBtn.size(); i++) {
-            ((JButton) umlBtn.get(i)).setBackground(Color.white);
-        }
-    }
-
-
-
 
 }
 

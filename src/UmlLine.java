@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public abstract class UmlLine {
-    protected UmlObject startObject, endObject;
+//    protected UmlObject startObject, endObject;
     protected int startX, startY, endX, endY, startObjX, startObjY, endObjX, endObjY;
     public UmlLine(){
 //        this.startObject = startObject;
@@ -81,18 +81,18 @@ public abstract class UmlLine {
         return this.endY;
     }
 
-    void setStartObject(UmlObject startObject){
-        this.startObject = startObject;
-        setStartObjX((this.startObject).getX());
-        setStartObjY((this.startObject).getY());
-    }
-
-    void setEndObject(UmlObject endObject){
-        this.endObject = endObject;
-        setEndObjX((this.endObject).getX());
-        setEndObjY((this.endObject).getY());
-    }
-
-    abstract Graphics2D draw(Graphics2D g2);
+//    void setStartObject(UmlObject startObject){
+//        this.startObject = startObject;
+//        setStartObjX((this.startObject).getX());
+//        setStartObjY((this.startObject).getY());
+//    }
+//
+//    void setEndObject(UmlObject endObject){
+//        this.endObject = endObject;
+//        setEndObjX((this.endObject).getX());
+//        setEndObjY((this.endObject).getY());
+//    }
+//
+//    abstract Graphics2D draw(Graphics2D g2);
 
 }

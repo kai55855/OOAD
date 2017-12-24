@@ -1,36 +1,31 @@
-public class ClassMode implements MouseMode{
+public class ClassMode implements MouseMode {
     MainCanvas canvas;
-    public ClassMode(MainCanvas canvas){
+
+    public ClassMode(MainCanvas canvas) {
         this.canvas = canvas;
     }
+
     @Override
     public void mouseClicked(int x, int y) {
-        System.out.println("this is select class mode clicked");
-        ClassObject classObject = new ClassObject(x, y, 0);
+        Class classObj = new Class(x, y, 0, "default");
         for (int i = 0; i < canvas.paintedObject.size(); i++) {
-            if (classObject.hit((UmlObject) canvas.paintedObject.get(i), canvas.g2)) {
-                ((UmlObject) canvas.paintedObject.get(i)).setDepth(((UmlObject) canvas.paintedObject.get(i)).getDepth() + 1);
+            if (classObj.hit(canvas.paintedObject.get(i), canvas.g2)) {
+                canvas.paintedObject.get(i).setDepth(canvas.paintedObject.get(i).getDepth() + 1);
             }
         }
-        canvas.paintedObject.add((UmlObject) classObject);
-        canvas.g2 = classObject.draw(canvas.g2);
-        canvas.repaint();
+        canvas.paintedObject.add(classObj);
+        canvas.drawPaintedObject();
     }
 
     @Override
     public void mousePressed(int x, int y) {
-//            System.out.println("this is class btn pressed");
-
     }
 
     @Override
     public void mouseDragged(int x, int y) {
-//            System.out.println("this is class btn dragged");
-
     }
 
     @Override
     public void mouseReleased(int x, int y) {
-
     }
 }
