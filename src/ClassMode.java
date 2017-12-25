@@ -28,4 +28,14 @@ public class ClassMode implements MouseMode {
     @Override
     public void mouseReleased(int x, int y) {
     }
+
+    @Override
+    public void group() {
+
+    }
+
+    @Override
+    public void unGroup() {
+
+    }
 }

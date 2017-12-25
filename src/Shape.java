@@ -1,16 +1,22 @@
 import java.awt.*;
+import java.util.Vector;
 
 public abstract class Shape {
     private int x, y;
     private boolean selected;
     private int depth, width, height;
     private String objectName;
+    private int lastX, lastY;
+    private int selectedPortNumber;
     public Shape(int x, int y, int depth, String objectName) {
         setX(x);
         setY(y);
         setDepth(depth);
         setObjectName(objectName);
         setSelected(false);
+        setLastX(0);
+        setLastY(0);
+        setSelectedPortNumber(0);
     }
 
     void setX(int x) {
@@ -62,6 +68,30 @@ public abstract class Shape {
         return this.depth;
     }
 
+    void setLastX(int x) {
+        this.lastX = x;
+    }
+
+    int getLastX(){
+        return this.lastX;
+    }
+
+    void setLastY(int y) {
+        this.lastY = y;
+    }
+
+    int getLastY(){
+        return this.lastY;
+    }
+
+    void setSelectedPortNumber(int number){
+        this.selectedPortNumber = number;
+    }
+
+    int getSelectedPortNumber(){
+        return this.selectedPortNumber;
+    }
+
     void setObjectName(String objectName) {
         this.objectName = objectName;
     }
@@ -79,4 +109,11 @@ public abstract class Shape {
     abstract boolean clicked(int x, int y, Graphics2D g2);
 
     abstract boolean isCovered(int x, int y, int x2, int y2);
+
+
+    abstract Port getPort(int x, int y, Graphics2D g2);
+
+    abstract void addGroup(Shape shape);
+
+    abstract boolean unGroup(Vector<Shape> paintedObject);
 }

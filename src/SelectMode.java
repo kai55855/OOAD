@@ -27,8 +27,11 @@ public class SelectMode implements MouseMode {
         pressedObject = canvas.findTopObject(x, y);
         if (pressedObject != null) {
             isPressedObject = true;
+            canvas.setSelected(pressedObject, true);
+            pressedObject.setLastX(x);
+            pressedObject.setLastY(y);
         }
-        //if not pressed object, 代表是框取物件, 所以要把x, y存起來
+        //if not pressed object, 代表是框取物件
         else {
             pressedX = x;
             pressedY = y;
@@ -41,6 +44,8 @@ public class SelectMode implements MouseMode {
             pressedObject.move(x, y);
             canvas.drawPaintedObject();
             isDraggedObject = true;
+            pressedObject.setLastX(x);
+            pressedObject.setLastY(y);
         }
     }
 
@@ -58,5 +63,31 @@ public class SelectMode implements MouseMode {
             }
             canvas.drawPaintedObject();
         }
+    }
+
+    @Override
+    public void group() {
+        Shape group = new GroupObject();
+        for (int i = 0; i < canvas.paintedObject.size(); i++) {
+            if (canvas.paintedObject.get(i).getSelected()) {
+                group.addGroup(canvas.paintedObject.get(i));
+                canvas.paintedObject.remove(i);
+                i--;
+            }
+        }
+        canvas.paintedObject.add(group);
+        canvas.drawPaintedObject();
+    }
+
+    @Override
+    public void unGroup() {
+        for (int i = 0; i < canvas.paintedObject.size(); i++) {
+            if (canvas.paintedObject.get(i).getSelected()) {
+                if (canvas.paintedObject.get(i).unGroup(canvas.paintedObject)) {
+                    canvas.paintedObject.remove(i);
+                }
+            }
+        }
+        canvas.drawPaintedObject();
     }
 }

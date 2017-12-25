@@ -48,7 +48,8 @@ public class MainFrame extends JFrame {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         String name = JOptionPane.showInputDialog(null, "請輸入:", "輸入對話框", JOptionPane.QUESTION_MESSAGE);
-                        mainCanvas.changeObjectName(name);
+                        if (!name.isEmpty())
+                            mainCanvas.changeObjectName(name);
                     }
                 }
         );
@@ -64,7 +65,14 @@ public class MainFrame extends JFrame {
         );
         edit.addSeparator();
         edit.add(editItem3);
-
+        editItem3.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        mainCanvas.unGroup();
+                    }
+                }
+        );
         file.setPopupMenuVisible(true);
         edit.setPopupMenuVisible(true);
         menubar.add(file);
@@ -74,9 +82,9 @@ public class MainFrame extends JFrame {
         umlBtn.add(selectBtn);
         umlBtn.add(useCaseBtn);
         umlBtn.add(classBtn);
-//        umlBtn.add(associationBtn);
-//        umlBtn.add(generalizationBtn);
-//        umlBtn.add(compositionBtn);
+        umlBtn.add(associationBtn);
+        umlBtn.add(generalizationBtn);
+        umlBtn.add(compositionBtn);
         for (int i = 0; i < umlBtn.size(); i++) {
             controlPanel.add((JButton) umlBtn.get(i));
         }

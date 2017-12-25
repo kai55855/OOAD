@@ -1,6 +1,9 @@
 public class CompositionLineMode implements MouseMode {
     MainCanvas canvas;
-    boolean pressed = false;
+    private boolean isPressedObject;
+    private Shape pressedObject, releaseObject;
+    private Port beginPort, endPort;
+    private int endPortNumber;
     public CompositionLineMode(MainCanvas canvas){
         this.canvas = canvas;
     }
@@ -11,17 +14,12 @@ public class CompositionLineMode implements MouseMode {
 
     @Override
     public void mousePressed(int x, int y) {
-//        UmlObject top = canvas.findTopObject(x, y);
-//        if (top != null) {
-//            pressed = true;
-//            top.setSelected(true);
-//            canvas.g2 = top.draw(canvas.g2);
-//            canvas.repaint();
-//            canvas.compositionLine = new CompositionLine();
-//            canvas.compositionLine.setStartObject(top);
-//            canvas.compositionLine.setStartX(x);
-//            canvas.compositionLine.setStartY(y);
-//        }
+        isPressedObject = false;
+        pressedObject = canvas.findTopObject(x, y);
+        if (pressedObject != null) {
+            beginPort = pressedObject.getPort(x, y, canvas.g2);
+            isPressedObject = true;
+        }
     }
 
     @Override
@@ -31,19 +29,26 @@ public class CompositionLineMode implements MouseMode {
 
     @Override
     public void mouseReleased(int x, int y) {
-//        if (!pressed)
-//            return;
-//        UmlObject top = canvas.findTopObject(x, y);
-//        if (top != null) {
-//            top.setSelected(true);
-//            canvas.g2 = top.draw(canvas.g2);
-//            canvas.repaint();
-//            canvas.compositionLine.setEndObject(top);
-//            canvas.compositionLine.setEndX(x);
-//            canvas.compositionLine.setEndY(y);
-//            canvas.g2 = canvas.compositionLine.draw(canvas.g2);
-//            canvas.repaint();
-//            canvas.paintedLine.add(canvas.compositionLine);
-//        }
+        if (isPressedObject) {
+            releaseObject = canvas.findTopObject(x, y);
+            if (releaseObject != null && pressedObject != releaseObject) {
+                endPort = releaseObject.getPort(x, y, canvas.g2);
+                endPortNumber = releaseObject.getSelectedPortNumber();
+                canvas.paintedObject.add(new CompositionLine(beginPort, endPort, endPortNumber));
+                pressedObject.setSelected(true);
+                releaseObject.setSelected(true);
+                canvas.drawPaintedObject();
+            }
+        }
+    }
+
+    @Override
+    public void group() {
+
+    }
+
+    @Override
+    public void unGroup() {
+
     }
 }

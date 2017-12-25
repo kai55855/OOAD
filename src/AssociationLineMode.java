@@ -1,10 +1,13 @@
 public class AssociationLineMode implements MouseMode {
     MainCanvas canvas;
-    boolean pressed = false;
+    private boolean isPressedObject;
+    private Shape pressedObject, releaseObject;
+    private Port beginPort, endPort;
 
-    public AssociationLineMode(MainCanvas canvas){
+    public AssociationLineMode(MainCanvas canvas) {
         this.canvas = canvas;
     }
+
     @Override
     public void mouseClicked(int x, int y) {
 
@@ -12,22 +15,12 @@ public class AssociationLineMode implements MouseMode {
 
     @Override
     public void mousePressed(int x, int y) {
-//        pressed = false;
-////            System.out.printf("line pressed\n");
-//        UmlObject top = canvas.findTopObject(x, y);
-//        if (top == null)
-//            System.out.printf("line mouse pressed top == null\n");
-//        if (top != null) {
-//            pressed = true;
-//            top.setSelected(true);
-//            canvas.g2 = top.draw(canvas.g2);
-//            canvas.repaint();
-////                System.out.printf("top painted\n");
-//            canvas.associationLine = new AssociationLine();
-//            canvas.associationLine.setStartObject(top);
-//            canvas.associationLine.setStartX(x);
-//            canvas.associationLine.setStartY(y);
-//        }
+        isPressedObject = false;
+        pressedObject = canvas.findTopObject(x, y);
+        if (pressedObject != null) {
+            beginPort = pressedObject.getPort(x, y, canvas.g2);
+            isPressedObject = true;
+        }
     }
 
     @Override
@@ -37,22 +30,25 @@ public class AssociationLineMode implements MouseMode {
 
     @Override
     public void mouseReleased(int x, int y) {
-//        if (!pressed) {
-//            return;
-//        }
-////            System.out.printf("line release\n");
-//        UmlObject top = canvas.findTopObject(x, y);
-//        if (top != null) {
-//            top.setSelected(true);
-//            canvas.g2 = top.draw(canvas.g2);
-//            canvas.repaint();
-//            System.out.printf("top painted\n");
-//            canvas.associationLine.setEndObject(top);
-//            canvas.associationLine.setEndX(x);
-//            canvas.associationLine.setEndY(y);
-//            canvas.g2 = canvas.associationLine.draw(canvas.g2);
-//            canvas.repaint();
-//            canvas.paintedLine.add(canvas.associationLine);
-//        }
+        if (isPressedObject) {
+            releaseObject = canvas.findTopObject(x, y);
+            if (releaseObject != null && pressedObject != releaseObject) {
+                endPort = releaseObject.getPort(x, y, canvas.g2);
+                canvas.paintedObject.add(new AssociationLine(beginPort, endPort));
+                pressedObject.setSelected(true);
+                releaseObject.setSelected(true);
+                canvas.drawPaintedObject();
+            }
+        }
+    }
+
+    @Override
+    public void group() {
+
+    }
+
+    @Override
+    public void unGroup() {
+
     }
 }

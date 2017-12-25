@@ -16,10 +16,6 @@ public class MainCanvas extends Canvas {
     public Vector<Shape> paintedObject;
     public Vector paintedLine;
     public Graphics2D g2;
-    AssociationLine associationLine;
-    GeneralizationLine generalizationLine;
-    CompositionLine compositionLine;
-
 
     public MainCanvas() {
         super();
@@ -56,7 +52,6 @@ public class MainCanvas extends Canvas {
 
 
     Shape findTopObject(int x, int y) {
-        Vector pressedObject = new Vector();
         paintedObject.sort(new SortShapeObject());
         for (int i = paintedObject.size() - 1; i >= 0; i--) {
             if (paintedObject.get(i).clicked(x, y, g2)) {
@@ -64,41 +59,16 @@ public class MainCanvas extends Canvas {
             }
         }
         return null;
-//        for (int i = 0; i < paintedObject.size(); i++) {
-//            if (paintedObject.get(i).clicked(x, y, g2)) {
-//                pressedObject.add(paintedObject.get(i));
-//            }
-//        }
-//        if (!pressedObject.isEmpty()) {
-//            int min = 0, minDepth = 99;
-//            for (int i = 0; i < pressedObject.size(); i++) {
-//                int tmpDepth;
-//                tmpDepth = ((UmlObject) pressedObject.get(i)).getDepth();
-//                if (tmpDepth <= minDepth) {
-//                    min = i;
-//                    minDepth = tmpDepth;
-//                }
-//            }
-//            return (UmlObject) pressedObject.get(min);
-//        }
-//        return null;
     }
 
     void drawPaintedObject() {
         clear();
-//        paintedObject.sort(new SortBasicObject());
+        paintedObject.sort(new SortShapeObject());
         g2.setPaint(Color.black);
-//        System.out.printf("paintedObject size = %d\n", paintedObject.size());
         for (int i = 0; i < paintedObject.size(); i++) {
-//            System.out.printf("depth = %d\n", paintedObject.get(i).getDepth());
             g2 = paintedObject.get(i).draw(g2);
         }
         repaint();
-////        System.out.printf("paintedLine size = %d\n", paintedLine.size());
-//        for (int i = 0; i < paintedLine.size(); i++) {
-//            g2 = ((UmlLine) paintedLine.get(i)).draw(g2);
-//        }
-//        repaint();
     }
 
     public void paint(Graphics g) {
@@ -117,41 +87,37 @@ public class MainCanvas extends Canvas {
     public void clear() {
         g2.setPaint(Color.white);
         // draw white on entire draw area to clear
-        //System.out.printf("width = %d, heigh = %d\n", getSize().width, getSize().height);
         g2.fillRect(0, 0, getSize().width, getSize().height);
         g2.setPaint(Color.black);
         repaint();
     }
 
+    void setSelected(Shape shape, boolean flag){
+        for(int i = 0;i < paintedObject.size();i++){
+            if(paintedObject.get(i) != shape){
+                paintedObject.get(i).setSelected(!flag);
+            }
+            else{
+                paintedObject.get(i).setSelected(flag);
+            }
+        }
+    }
+
     void changeObjectName(String name) {
-//        for (int i = 0; i < paintedObject.size(); i++) {
-//            if (((UmlObject) paintedObject.get(i)).getSelected()) {
-//                ((UmlObject) paintedObject.get(i)).setObjectName(name);
-//                System.out.printf("change name\n");
-//            }
-//        }
-//        drawPaintedObject();
+        for (int i = 0; i < paintedObject.size(); i++) {
+            if (paintedObject.get(i).getSelected()) {
+                paintedObject.get(i).setObjectName(name);
+            }
+        }
+        drawPaintedObject();
     }
 
     void groupObject() {
-//        System.out.printf("group btn\n");
-//        Vector groupVector = new Vector();
-//        UmlObject group = null;
-//        for (int i = 0; i < paintedObject.size(); i++) {
-//            if (((UmlObject) paintedObject.get(i)).getSelected()) {
-//                groupVector.add((UmlObject) paintedObject.get(i));
-//            }
-//        }
-////        for(int i = 0; i < groupVector.size(); i++){
-////            paintedObject.remove(((UmlObject) groupVector.get(i)));
-////        }
-//        group = (UmlObject)groupVector.get(0);
-//        groupVector.remove(group);
-//        for(int i = 0; i < groupVector.size(); i++){
-//            group.group.add(((UmlObject) groupVector.get(i)));
-//        }
-//        paintedObject.add(group);
-//        drawPaintedObject();
+        mouseMode.group();
+    }
+
+    void unGroup(){
+        mouseMode.unGroup();
     }
 
     class MouseMotion extends MouseAdapter {
@@ -173,9 +139,6 @@ public class MainCanvas extends Canvas {
         }
 
         public void mouseMoved(MouseEvent e) {
-            //stateText.setText("mouseMoved x = " + e.getX() + " y = " + e.getY());
-            //xStart = e.getX();
-            //yStart = e.getY();
         }
 
 
